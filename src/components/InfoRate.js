@@ -17,7 +17,7 @@ export const InfoRate = () =>{
 
     const number = objectData.price?.number;
 
-    const GetRate  = `https://free.currconv.com/api/v7/convert?apiKey=do-not-use-this-key&q=${st1}_${st2}`;
+    const GetRate  = `https://free.currconv.com/api/v7/convert?apiKey=cc1c42623e7c44a5dccf&q=${st1}_${st2}`;
 
     const Output = (result * number)
 

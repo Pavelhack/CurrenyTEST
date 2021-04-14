@@ -23,7 +23,7 @@ export const App = () => {
                         <SelectForm currencyDefault={currencyDefault} setCurrencyDefault = {setCurrencyDefault}/>
                     </Route>
 
-                    <Route path="/InfoRate">
+                    <Route exact path="/InfoRate">
                         <InfoRate currencyFrom = {currencyFrom} setCurrencyFrom={setCurrencyFrom} currencyTo = {currencyTo} setCurrencyTo={setCurrencyTo}/>
                     </Route>
 

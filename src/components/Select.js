@@ -9,7 +9,7 @@ export const SelectForm = ({currencyDefault , setCurrencyDefault}) =>{
 
     let previousState = useRef(null);
 
-    let defaultCurrencies = `https://free.currconv.com/api/v7/convert?apiKey=do-not-use-this-key&q=USD_${currencyDefault},EUR_${currencyDefault}`
+    let defaultCurrencies = `https://free.currconv.com/api/v7/convert?apiKey=cc1c42623e7c44a5dccf&q=USD_${currencyDefault},EUR_${currencyDefault}`
 
     useEffect(
         () => {
