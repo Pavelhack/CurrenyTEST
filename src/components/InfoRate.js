@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useRef} from 'react';
 import {useState} from "react";
 import {Demo} from "./InputSubmit"
 
@@ -7,13 +7,15 @@ import {Demo} from "./InputSubmit"
 
 export const InfoRate = () =>{
 
+    let PreviousSt = useRef(undefined);
+
     const [objectData, setObjectData] = useState({});
 
     const [result, setResult] = useState();
 
-    const st1 = objectData.price?.currency;
+    const st1 = objectData?.price?.currency;
 
-    const st2 = objectData.price?.currency2;
+    const st2 = objectData?.price?.currency2;
 
     const number = objectData.price?.number;
 
@@ -21,13 +23,18 @@ export const InfoRate = () =>{
 
     const Output = (result * number)
 
+
+
     useEffect(
         () => {
-            if(st1 !== null && st2 !== null){
+            console.log(st1, PreviousSt.current)
+
+            if(PreviousSt.current !== st1){
                 (async () =>{
                     let res = await fetch(GetRate);
                     let getResult = await res.json();
                     setResult(getResult.results[`${st1}_${st2}`].val);
+                    PreviousSt.current = st1;
                 })();
             }
         }

@@ -7,9 +7,9 @@ const { Option } = Select;
 const PriceInput = ({ value = {}, onChange }) => {
     const [number, setNumber] = useState(0);
 
-    const [currency, setCurrency] = useState('rmb');
+    const [currency, setCurrency] = useState(undefined);
 
-    const [currency2, setCurrency2] = useState("rmb");
+    const [currency2, setCurrency2] = useState(undefined);
 
     const [currencies, setCurrencies] = useState([]);
 
