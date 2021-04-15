@@ -9,7 +9,9 @@ export const SelectForm = ({currencyDefault , setCurrencyDefault}) =>{
 
     let previousState = useRef(null);
 
-    let defaultCurrencies = `https://free.currconv.com/api/v7/convert?apiKey=cc1c42623e7c44a5dccf&q=USD_${currencyDefault},EUR_${currencyDefault}`
+    const defaultCurrencies = `https://free.currconv.com/api/v7/convert?apiKey=cc1c42623e7c44a5dccf&q=USD_${currencyDefault},EUR_${currencyDefault}`
+
+    const getDate = "https://free.currconv.com/api/v7/convert?apiKey=cc1c42623e7c44a5dccf&q=USD_BYN,BYN_USD&compact=ultra&date=2021-04-01&endDate=2021-04-15"
 
     useEffect(
         () => {
