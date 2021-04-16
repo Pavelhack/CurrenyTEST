@@ -8,9 +8,7 @@ import {Route, Switch} from "react-router-dom"
 
 export const App = () => {
 
-    const [currencyDefault, setCurrencyDefault] = useState("BYN");
-    const [currencyFrom, setCurrencyFrom] = useState("USD");
-    const [currencyTo, setCurrencyTo] = useState("BYN");
+
 
     return (
         <div className="App">
@@ -20,11 +18,11 @@ export const App = () => {
                 <Switch>
 
                     <Route exact path="/">
-                        <SelectForm currencyDefault={currencyDefault} setCurrencyDefault = {setCurrencyDefault}/>
+                        <SelectForm />
                     </Route>
 
                     <Route exact path="/InfoRate">
-                        <InfoRate currencyFrom = {currencyFrom} setCurrencyFrom={setCurrencyFrom} currencyTo = {currencyTo} setCurrencyTo={setCurrencyTo}/>
+                        <InfoRate/>
                     </Route>
 
                 </Switch>

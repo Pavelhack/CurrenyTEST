@@ -1,64 +1,53 @@
 import React, {useState, useEffect} from 'react';
-import {Select} from 'antd';
-import DB from './CountryObject.json'
+import { Select} from "antd";
+import {Requests} from "./Requests";
+const {Option} = Select;
 
 export const InputValue = ({ setCurrency }) => {
-    const [currencies, setCurrencies] = useState(0);
+
+    const [currencies, setCurrencies] = useState([]);
 
     const [inputValue, setValue] = useState('currency')
 
-    // let urlCurrencies = "https://free.currconv.com/api/v7/currencies?apiKey=cc1c42623e7c44a5dccf"
-
-    const ArrCurrency = [];
-
-    const {Option} = Select;
-
-    // for (let i = 0; i < currencies.length - 1; i++) {
-    //     ArrCurrency.push(<Option key={currencies[i]}>{currencies[i]}</Option>);
-    // }
-
-    for (let i = 0; i < DB.length - 1; i++) {
-        ArrCurrency.push(
-            <Option key={DB[i].name}>
-                {DB[i].name}
-                <br></br>
-                {DB[i].currencyID}
-            </Option>
-        );
-    }
-
-
-    // useEffect(
-    //     () => {
-    //         if (currencies === 0) {
-    //             (async () => {
-    //                 let response = await fetch(urlCurrencies);
-    //                 let result = await response.json();
-    //                 for (let i in result.results) {
-    //                     ArrCurrency.push(i)
-    //                 }
-    //                 setCurrencies(ArrCurrency);
-    //             })();
-    //         }
-    //     }
-    // )
-
-
     function onChange(value) {
 
-        const Callback = (elem, index, DB) =>{
+        //let SelectCurrency = DB.find((elem) => {if(elem.value === value) return elem})
 
-            if(value === elem.name)
-
-           return elem
-
-        }
-        let  SelectCurrency = DB.find(Callback).currencyID
-
-        setCurrency(SelectCurrency);
-        setValue(SelectCurrency)
+        setCurrency(value);
+        setValue(value)
     }
 
+    useEffect(
+        () => {
+            const req = new Requests()
+            let array =[]
+
+            req.GetCurrenciesAPI().then((data)=>{
+
+                for (let i in data.results) {
+                    array.push(i)
+                }
+
+                // sort of array
+                array.sort();
+
+                const PopularCurrencies = ["USD","EUR","RUB","BYN","GBP"];
+
+                // delete popular currencies from array
+                PopularCurrencies.forEach((element) =>{
+                    array = array.filter(item => item !== element)
+                })
+
+                // add popular currencies into start
+                array.unshift(...PopularCurrencies)
+
+                array = array.map((item) => <Option key={item}>{item}</Option> )
+
+                setCurrencies(array)
+            })
+
+        }, []
+    )
     return (
         <Select
             showSearch
@@ -72,7 +61,7 @@ export const InputValue = ({ setCurrency }) => {
             optionFilterProp="children"
             onChange={onChange}
         >
-            {ArrCurrency}
+            {currencies}
         </Select>
     )
 }

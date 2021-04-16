@@ -1,10 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import { Form, Input, Select, Button } from 'antd';
-import {InputValue} from "./Input";
+import {Requests} from "./Requests";
 const { Option } = Select;
 
 
 const PriceInput = ({ value = {}, onChange }) => {
+
     const [number, setNumber] = useState(0);
 
     const [currency, setCurrency] = useState(undefined);
@@ -13,27 +14,36 @@ const PriceInput = ({ value = {}, onChange }) => {
 
     const [currencies, setCurrencies] = useState([]);
 
-    const UrlCurrencies = "https://free.currconv.com/api/v7/currencies?apiKey=cc1c42623e7c44a5dccf"
-
-    const ArrCurrency = [];
-
-    for (let i = 0; i < currencies.length - 1; i++) {
-        ArrCurrency.push(<Option key={currencies[i]}>{currencies[i]}</Option>);
-    }
-
     useEffect(
         () => {
-            if (currencies.length === 0) {
-                (async () => {
-                    let response = await fetch(UrlCurrencies);
-                    let result = await response.json();
-                    for (let i in result.results) {
-                        ArrCurrency.push(i)
-                    }
-                    setCurrencies(ArrCurrency);
-                })();
-            }
-        }
+            const req = new Requests()
+            let array =[]
+
+            req.GetCurrenciesAPI().then((data)=>{
+
+                for (let i in data.results) {
+                    array.push(i)
+                }
+
+                // sort of array
+                array.sort();
+
+                const PopularCurrencies = ["USD","EUR","RUB","BYN","GBP"];
+
+                // delete popular currencies from array
+                PopularCurrencies.forEach((element) =>{
+                    array = array.filter(item => item !== element)
+                })
+
+                // add popular currencies into start
+                array.unshift(...PopularCurrencies)
+
+                array = array.map((item) => <Option key={item}>{item}</Option> )
+
+                setCurrencies(array)
+            })
+
+        }, []
     )
 
     const triggerChange = (changedValue) => {
@@ -94,27 +104,34 @@ const PriceInput = ({ value = {}, onChange }) => {
 
               <Select
                   showSearch
-                  value={value.currency || currency}
+                  value={value.currency || "currency"}
                   style={{ width: 80, margin: '0 8px' }}
                   onChange={onCurrencyChange}
               >
-                   {ArrCurrency}
+                   {currencies}
               </Select>
-            <Select
+
+              <Select
                   showSearch
-                  value={value.currency2 || currency2}
+                  value = {value.currency2 || "currency"}
                   style={{ width: 80, margin: '0 8px' }}
                   onChange={onCurrencyChange2}
               >
-                   {ArrCurrency}
+                   {currencies}
               </Select>
         </span>
     );
 };
 
-export const Demo = ({setObject}) => {
+export const Demo = ({setResult}) => {
+
     const onFinish = (values) => {
-        setObject(values);
+
+        const req = new Requests()
+
+        req.GetRateSt1_St2(values.price.currency, values.price.currency2).then(result =>{
+            setResult(result.results[`${values.price.currency}_${values.price.currency2}`].val * values.price?.number);
+        })
     };
 
     const checkPrice = (_, value) => {
