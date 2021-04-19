@@ -4,7 +4,7 @@ import {Requests} from "./Requests";
 const { Option } = Select;
 
 
-const PriceInput = ({ value = {}, onChange }) => {
+export const PriceInput = ({ value = {}, onChange}) => {
 
     const [number, setNumber] = useState(0);
 
@@ -124,7 +124,6 @@ const PriceInput = ({ value = {}, onChange }) => {
 };
 
 export const Demo = ({setResult}) => {
-
     const onFinish = (values) => {
 
         const req = new Requests()
@@ -163,7 +162,7 @@ export const Demo = ({setResult}) => {
                     },
                 ]}
             >
-                <PriceInput />
+                <PriceInput/>
             </Form.Item>
             <Form.Item>
                 <Button type="primary" htmlType="submit">

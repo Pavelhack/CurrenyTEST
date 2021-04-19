@@ -10,6 +10,8 @@ export const SelectForm = () =>{
 
     const [eur, setEUR] = useState(null);
 
+    const [flag, setFlag] = useState('')
+
     useEffect(
         () => {
             const req = new Requests();
@@ -32,7 +34,8 @@ return(
             <div className = "USD">USD > {currencyDefault} = {usd}</div>
             <div className = "EUR">EUR > {currencyDefault} = {eur}</div>
         </div>
-        <InputValue setCurrency = {setCurrencyDefault}/>
+        <InputValue setCurrency = {setCurrencyDefault} setFlag={setFlag}/>
+            <img src = {flag}/>
     </div>
 );
 }

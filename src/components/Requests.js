@@ -4,12 +4,13 @@ const ArrCurrency = [];
 const {Option} = Select;
 
 
+
 export class Requests{
 
     GEtCurrenciesJson = () =>{
         for (let i = 0; i < DB.length - 1; i++) {
             ArrCurrency.push(
-                <Option key={DB[i].name}>
+                <Option key={DB[i].name} flag = {DB[i].id} currencyid = {DB[i].currencyID}>
                     {DB[i].name}
                     <br></br>
                     {DB[i].currencyID}
