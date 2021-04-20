@@ -2,996 +2,1195 @@
 	{
 		"id": "AU",
 		"name": "Australia",
-		"currencyID": "AUD"
+		"currencyID": "AUD",
+		"currencyName": "Australian dollar"
 	},
 	{
 		"id": "BD",
 		"name": "Bangladesh",
-		"currencyID": "BDT"
+		"currencyID": "BDT",
+		"currencyName": "Bangladeshi taka"
 	},
 	{
 		"id": "BJ",
 		"name": "Benin",
-		"currencyID": "XOF"
+		"currencyID": "XOF",
+		"currencyName": "West African CFA franc"
 	},
 	{
 		"id": "BR",
 		"name": "Brazil",
-		"currencyID": "BRL"
+		"currencyID": "BRL",
+		"currencyName": "Brazilian real"
 	},
 	{
 		"id": "KH",
 		"name": "Cambodia",
-		"currencyID": "KHR"
+		"currencyID": "KHR",
+		"currencyName": "Cambodian riel"
 	},
 	{
 		"id": "TD",
 		"name": "Chad",
-		"currencyID": "XAF"
+		"currencyID": "XAF",
+		"currencyName": "Central African CFA franc"
 	},
 	{
 		"id": "CG",
 		"name": "Congo",
-		"currencyID": "XAF"
+		"currencyID": "XAF",
+		"currencyName": "Central African CFA franc"
 	},
 	{
 		"id": "CU",
 		"name": "Cuba",
-		"currencyID": "CUP"
+		"currencyID": "CUP",
+		"currencyName": "Cuban peso"
 	},
 	{
 		"id": "DM",
 		"name": "Dominica",
-		"currencyID": "XCD"
+		"currencyID": "XCD",
+		"currencyName": "East Caribbean dollar"
 	},
 	{
 		"id": "FI",
 		"name": "Finland",
-		"currencyID": "EUR"
+		"currencyID": "EUR",
+		"currencyName": "European euro"
 	},
 	{
 		"id": "GE",
 		"name": "Georgia",
-		"currencyID": "GEL"
+		"currencyID": "GEL",
+		"currencyName": "Georgian lari"
 	},
 	{
 		"id": "GD",
 		"name": "Grenada",
-		"currencyID": "XCD"
+		"currencyID": "XCD",
+		"currencyName": "East Caribbean dollar"
 	},
 	{
 		"id": "HT",
 		"name": "Haiti",
-		"currencyID": "HTG"
+		"currencyID": "HTG",
+		"currencyName": "Haitian gourde"
 	},
 	{
 		"id": "IN",
 		"name": "India",
-		"currencyID": "INR"
+		"currencyID": "INR",
+		"currencyName": "Indian rupee"
 	},
 	{
 		"id": "IL",
 		"name": "Israel",
-		"currencyID": "ILS"
+		"currencyID": "ILS",
+		"currencyName": "Israeli new sheqel"
 	},
 	{
 		"id": "KZ",
 		"name": "Kazakhstan",
-		"currencyID": "KZT"
+		"currencyID": "KZT",
+		"currencyName": "Kazakhstani tenge"
 	},
 	{
 		"id": "KW",
 		"name": "Kuwait",
-		"currencyID": "KWD"
+		"currencyID": "KWD",
+		"currencyName": "Kuwaiti dinar"
 	},
 	{
 		"id": "LS",
 		"name": "Lesotho",
-		"currencyID": "LSL"
+		"currencyID": "LSL",
+		"currencyName": "Lesotho loti"
 	},
 	{
 		"id": "LU",
 		"name": "Luxembourg",
-		"currencyID": "EUR"
+		"currencyID": "EUR",
+		"currencyName": "European euro"
 	},
 	{
 		"id": "MY",
 		"name": "Malaysia",
-		"currencyID": "MYR"
+		"currencyID": "MYR",
+		"currencyName": "Malaysian ringgit"
 	},
 	{
 		"id": "MU",
 		"name": "Mauritius",
-		"currencyID": "MUR"
+		"currencyID": "MUR",
+		"currencyName": "Mauritian rupee"
 	},
 	{
 		"id": "MN",
 		"name": "Mongolia",
-		"currencyID": "MNT"
+		"currencyID": "MNT",
+		"currencyName": "Mongolian tugrik"
 	},
 	{
 		"id": "MM",
 		"name": "Myanmar",
-		"currencyID": "MMK"
+		"currencyID": "MMK",
+		"currencyName": "Myanma kyat"
 	},
 	{
 		"id": "NC",
 		"name": "New Caledonia",
-		"currencyID": "XPF"
+		"currencyID": "XPF",
+		"currencyName": "CFP franc"
 	},
 	{
 		"id": "NO",
 		"name": "Norway",
-		"currencyID": "NOK"
+		"currencyID": "NOK",
+		"currencyName": "Norwegian krone"
 	},
 	{
 		"id": "PG",
 		"name": "Papua New Guinea",
-		"currencyID": "PGK"
+		"currencyID": "PGK",
+		"currencyName": "Papua New Guinean kina"
 	},
 	{
 		"id": "PT",
 		"name": "Portugal",
-		"currencyID": "EUR"
+		"currencyID": "EUR",
+		"currencyName": "European euro"
 	},
 	{
 		"id": "RW",
 		"name": "Rwanda",
-		"currencyID": "RWF"
+		"currencyID": "RWF",
+		"currencyName": "Rwandan franc"
 	},
 	{
 		"id": "WS",
 		"name": "Samoa (Western)",
-		"currencyID": "WST"
+		"currencyID": "WST",
+		"currencyName": "Samoan tala"
 	},
 	{
 		"id": "RS",
 		"name": "Serbia",
-		"currencyID": "RSD"
+		"currencyID": "RSD",
+		"currencyName": "Serbian dinar"
 	},
 	{
 		"id": "SI",
 		"name": "Slovenia",
-		"currencyID": "EUR"
+		"currencyID": "EUR",
+		"currencyName": "European euro"
 	},
 	{
 		"id": "ES",
 		"name": "Spain",
-		"currencyID": "EUR"
+		"currencyID": "EUR",
+		"currencyName": "European euro"
 	},
 	{
 		"id": "SE",
 		"name": "Sweden",
-		"currencyID": "SEK"
+		"currencyID": "SEK",
+		"currencyName": "Swedish krona"
 	},
 	{
 		"id": "TZ",
 		"name": "Tanzania",
-		"currencyID": "TZS"
+		"currencyID": "TZS",
+		"currencyName": "Tanzanian shilling"
 	},
 	{
 		"id": "TN",
 		"name": "Tunisia",
-		"currencyID": "TND"
+		"currencyID": "TND",
+		"currencyName": "Tunisian dinar"
 	},
 	{
 		"id": "UA",
 		"name": "Ukraine",
-		"currencyID": "UAH"
+		"currencyID": "UAH",
+		"currencyName": "Ukrainian hryvnia"
 	},
 	{
 		"id": "UZ",
 		"name": "Uzbekistan",
-		"currencyID": "UZS"
+		"currencyID": "UZS",
+		"currencyName": "Uzbekistani som"
 	},
 	{
 		"id": "YE",
 		"name": "Yemen",
-		"currencyID": "YER"
+		"currencyID": "YER",
+		"currencyName": "Yemeni rial"
 	},
 	{
 		"id": "DZ",
 		"name": "Algeria",
-		"currencyID": "DZD"
+		"currencyID": "DZD",
+		"currencyName": "Algerian dinar"
 	},
 	{
 		"id": "AR",
 		"name": "Argentina",
-		"currencyID": "ARS"
+		"currencyID": "ARS",
+		"currencyName": "Argentine peso"
 	},
 	{
 		"id": "AZ",
 		"name": "Azerbaijan",
-		"currencyID": "AZN"
+		"currencyID": "AZN",
+		"currencyName": "Azerbaijani manat"
 	},
 	{
 		"id": "BY",
 		"name": "Belarus",
-		"currencyID": "BYN"
+		"currencyID": "BYN",
+		"currencyName": "New Belarusian ruble"
 	},
 	{
 		"id": "BO",
 		"name": "Bolivia",
-		"currencyID": "BOB"
+		"currencyID": "BOB",
+		"currencyName": "Bolivian boliviano"
 	},
 	{
 		"id": "BG",
 		"name": "Bulgaria",
-		"currencyID": "BGN"
+		"currencyID": "BGN",
+		"currencyName": "Bulgarian lev"
 	},
 	{
 		"id": "CA",
 		"name": "Canada",
-		"currencyID": "CAD"
+		"currencyID": "CAD",
+		"currencyName": "Canadian dollar"
 	},
 	{
 		"id": "CN",
 		"name": "China",
-		"currencyID": "CNY"
+		"currencyID": "CNY",
+		"currencyName": "Chinese renminbi"
 	},
 	{
 		"id": "CR",
 		"name": "Costa Rica",
-		"currencyID": "CRC"
+		"currencyID": "CRC",
+		"currencyName": "Costa Rican colon"
 	},
 	{
 		"id": "CZ",
 		"name": "Czech Republic",
-		"currencyID": "CZK"
+		"currencyID": "CZK",
+		"currencyName": "Czech koruna"
 	},
 	{
 		"id": "EC",
 		"name": "Ecuador",
-		"currencyID": "USD"
+		"currencyID": "USD",
+		"currencyName": "U.S. Dollar"
 	},
 	{
 		"id": "EE",
 		"name": "Estonia",
-		"currencyID": "EUR"
+		"currencyID": "EUR",
+		"currencyName": "European euro"
 	},
 	{
 		"id": "PF",
 		"name": "French Polynesia",
-		"currencyID": "XPF"
+		"currencyID": "XPF",
+		"currencyName": "CFP franc"
 	},
 	{
 		"id": "GH",
 		"name": "Ghana",
-		"currencyID": "GHS"
+		"currencyID": "GHS",
+		"currencyName": "Ghanaian cedi"
 	},
 	{
 		"id": "GN",
 		"name": "Guinea",
-		"currencyID": "GNF"
+		"currencyID": "GNF",
+		"currencyName": "Guinean franc"
 	},
 	{
 		"id": "HK",
 		"name": "Hong Kong",
-		"currencyID": "HKD"
+		"currencyID": "HKD",
+		"currencyName": "Hong Kong dollar"
 	},
 	{
 		"id": "IR",
 		"name": "Iran, Islamic Republic of",
-		"currencyID": "IRR"
+		"currencyID": "IRR",
+		"currencyName": "Iranian rial"
 	},
 	{
 		"id": "JM",
 		"name": "Jamaica",
-		"currencyID": "JMD"
+		"currencyID": "JMD",
+		"currencyName": "Jamaican dollar"
 	},
 	{
 		"id": "KI",
 		"name": "Kiribati",
-		"currencyID": "AUD"
+		"currencyID": "AUD",
+		"currencyName": "Australian dollar"
 	},
 	{
 		"id": "LA",
 		"name": "Laos",
-		"currencyID": "LAK"
+		"currencyID": "LAK",
+		"currencyName": "Lao kip"
 	},
 	{
 		"id": "LY",
 		"name": "Libya",
-		"currencyID": "LYD"
+		"currencyID": "LYD",
+		"currencyName": "Libyan dinar"
 	},
 	{
 		"id": "MK",
 		"name": "Macedonia (Former Yug. Rep.)",
-		"currencyID": "MKD"
+		"currencyID": "MKD",
+		"currencyName": "Macedonian denar"
 	},
 	{
 		"id": "ML",
 		"name": "Mali",
-		"currencyID": "XOF"
+		"currencyID": "XOF",
+		"currencyName": "West African CFA franc"
 	},
 	{
 		"id": "FM",
 		"name": "Micronesia",
-		"currencyID": "USD"
+		"currencyID": "USD",
+		"currencyName": "U.S. Dollar"
 	},
 	{
 		"id": "MS",
 		"name": "Montserrat",
-		"currencyID": "XCD"
+		"currencyID": "XCD",
+		"currencyName": "East Caribbean dollar"
 	},
 	{
 		"id": "NR",
 		"name": "Nauru",
-		"currencyID": "AUD"
+		"currencyID": "AUD",
+		"currencyName": "Australian dollar"
 	},
 	{
 		"id": "NI",
 		"name": "Nicaragua",
-		"currencyID": "NIO"
+		"currencyID": "NIO",
+		"currencyName": "Nicaraguan cordoba"
 	},
 	{
 		"id": "PK",
 		"name": "Pakistan",
-		"currencyID": "PKR"
+		"currencyID": "PKR",
+		"currencyName": "Pakistani rupee"
 	},
 	{
 		"id": "PE",
 		"name": "Peru",
-		"currencyID": "PEN"
+		"currencyID": "PEN",
+		"currencyName": "Peruvian nuevo sol"
 	},
 	{
 		"id": "QA",
 		"name": "Qatar",
-		"currencyID": "QAR"
+		"currencyID": "QAR",
+		"currencyName": "Qatari riyal"
 	},
 	{
 		"id": "KN",
 		"name": "Saint Kitts and Nevis",
-		"currencyID": "XCD"
+		"currencyID": "XCD",
+		"currencyName": "East Caribbean dollar"
 	},
 	{
 		"id": "ST",
 		"name": "Sao Tome and Principe",
-		"currencyID": "STD"
+		"currencyID": "STD",
+		"currencyName": "Sao Tome and Principe dobra"
 	},
 	{
 		"id": "SL",
 		"name": "Sierra Leone",
-		"currencyID": "SLL"
+		"currencyID": "SLL",
+		"currencyName": "Sierra Leonean leone"
 	},
 	{
 		"id": "SO",
 		"name": "Somalia",
-		"currencyID": "SOS"
+		"currencyID": "SOS",
+		"currencyName": "Somali shilling"
 	},
 	{
 		"id": "SD",
 		"name": "Sudan",
-		"currencyID": "SDG"
+		"currencyID": "SDG",
+		"currencyName": "Sudanese pound"
 	},
 	{
 		"id": "SY",
 		"name": "Syria",
-		"currencyID": "SYP"
+		"currencyID": "SYP",
+		"currencyName": "Syrian pound"
 	},
 	{
 		"id": "TG",
 		"name": "Togo",
-		"currencyID": "XOF"
+		"currencyID": "XOF",
+		"currencyName": "West African CFA franc"
 	},
 	{
 		"id": "TM",
 		"name": "Turkmenistan",
-		"currencyID": "TMT"
+		"currencyID": "TMT",
+		"currencyName": "Turkmenistan manat"
 	},
 	{
 		"id": "GB",
 		"name": "United Kingdom",
-		"currencyID": "GBP"
+		"currencyID": "GBP",
+		"currencyName": "British pound"
 	},
 	{
 		"id": "VE",
 		"name": "Venezuela",
-		"currencyID": "VEF"
+		"currencyID": "VEF",
+		"currencyName": "Venezuelan bolivar"
 	},
 	{
 		"id": "AD",
 		"name": "Andorra",
-		"currencyID": "EUR"
+		"currencyID": "EUR",
+		"currencyName": "European euro"
 	},
 	{
 		"id": "AM",
 		"name": "Armenia",
-		"currencyID": "AMD"
+		"currencyID": "AMD",
+		"currencyName": "Armenian dram"
 	},
 	{
 		"id": "BS",
 		"name": "Bahamas",
-		"currencyID": "BSD"
+		"currencyID": "BSD",
+		"currencyName": "Bahamian dollar"
 	},
 	{
 		"id": "BE",
 		"name": "Belgium",
-		"currencyID": "EUR"
+		"currencyID": "EUR",
+		"currencyName": "European euro"
 	},
 	{
 		"id": "BA",
 		"name": "Bosnia-Herzegovina",
-		"currencyID": "BAM"
+		"currencyID": "BAM",
+		"currencyName": "Bosnia and Herzegovina konvertibilna marka"
 	},
 	{
 		"id": "BF",
 		"name": "Burkina Faso",
-		"currencyID": "XOF"
+		"currencyID": "XOF",
+		"currencyName": "West African CFA franc"
 	},
 	{
 		"id": "KY",
 		"name": "Cayman Islands",
-		"currencyID": "KYD"
+		"currencyID": "KYD",
+		"currencyName": "Cayman Islands dollar"
 	},
 	{
 		"id": "CO",
 		"name": "Colombia",
-		"currencyID": "COP"
+		"currencyID": "COP",
+		"currencyName": "Colombian peso"
 	},
 	{
 		"id": "CI",
 		"name": "Côte d'Ivoire",
-		"currencyID": "XOF"
+		"currencyID": "XOF",
+		"currencyName": "West African CFA franc"
 	},
 	{
 		"id": "DK",
 		"name": "Denmark",
-		"currencyID": "DKK"
+		"currencyID": "DKK",
+		"currencyName": "Danish krone"
 	},
 	{
 		"id": "EG",
 		"name": "Egypt",
-		"currencyID": "EGP"
+		"currencyID": "EGP",
+		"currencyName": "Egyptian pound"
 	},
 	{
 		"id": "ET",
 		"name": "Ethiopia",
-		"currencyID": "ETB"
+		"currencyID": "ETB",
+		"currencyName": "Ethiopian birr"
 	},
 	{
 		"id": "GA",
 		"name": "Gabon",
-		"currencyID": "XAF"
+		"currencyID": "XAF",
+		"currencyName": "Central African CFA franc"
 	},
 	{
 		"id": "GI",
 		"name": "Gibraltar",
-		"currencyID": "GIP"
+		"currencyID": "GIP",
+		"currencyName": "Gibraltar pound"
 	},
 	{
 		"id": "GW",
 		"name": "Guinea-Bissau",
-		"currencyID": "XOF"
+		"currencyID": "XOF",
+		"currencyName": "West African CFA franc"
 	},
 	{
 		"id": "HU",
 		"name": "Hungary",
-		"currencyID": "HUF"
+		"currencyID": "HUF",
+		"currencyName": "Hungarian forint"
 	},
 	{
 		"id": "IQ",
 		"name": "Iraq",
-		"currencyID": "IQD"
+		"currencyID": "IQD",
+		"currencyName": "Iraqi dinar"
 	},
 	{
 		"id": "JP",
 		"name": "Japan",
-		"currencyID": "JPY"
+		"currencyID": "JPY",
+		"currencyName": "Japanese yen"
 	},
 	{
 		"id": "KP",
 		"name": "Korea North",
-		"currencyID": "KPW"
+		"currencyID": "KPW",
+		"currencyName": "North Korean won"
 	},
 	{
 		"id": "LV",
 		"name": "Latvia",
-		"currencyID": "LVL"
+		"currencyID": "LVL",
+		"currencyName": "Latvian lats"
 	},
 	{
 		"id": "LI",
 		"name": "Liechtenstein",
-		"currencyID": "CHF"
+		"currencyID": "CHF",
+		"currencyName": "Swiss Franc"
 	},
 	{
 		"id": "MG",
 		"name": "Madagascar",
-		"currencyID": "MGA"
+		"currencyID": "MGA",
+		"currencyName": "Malagasy ariary"
 	},
 	{
 		"id": "MT",
 		"name": "Malta",
-		"currencyID": "EUR"
+		"currencyID": "EUR",
+		"currencyName": "European Euro"
 	},
 	{
 		"id": "MD",
 		"name": "Moldova",
-		"currencyID": "MDL"
+		"currencyID": "MDL",
+		"currencyName": "Moldovan leu"
 	},
 	{
 		"id": "MA",
 		"name": "Morocco",
-		"currencyID": "MAD"
+		"currencyID": "MAD",
+		"currencyName": "Moroccan dirham"
 	},
 	{
 		"id": "NP",
 		"name": "Nepal",
-		"currencyID": "NPR"
+		"currencyID": "NPR",
+		"currencyName": "Nepalese rupee"
 	},
 	{
 		"id": "NE",
 		"name": "Niger",
-		"currencyID": "XOF"
+		"currencyID": "XOF",
+		"currencyName": "West African CFA franc"
 	},
 	{
 		"id": "PW",
 		"name": "Palau",
-		"currencyID": "USD"
+		"currencyID": "USD",
+		"currencyName": "U.S. Dollar"
 	},
 	{
 		"id": "PH",
 		"name": "Philippines",
-		"currencyID": "PHP"
+		"currencyID": "PHP",
+		"currencyName": "Philippine peso"
 	},
 	{
 		"id": "RO",
 		"name": "Romania",
-		"currencyID": "RON"
+		"currencyID": "RON",
+		"currencyName": "Romanian leu"
 	},
 	{
 		"id": "LC",
 		"name": "Saint Lucia",
-		"currencyID": "XCD"
+		"currencyID": "XCD",
+		"currencyName": "East Caribbean dollar"
 	},
 	{
 		"id": "SA",
 		"name": "Saudi Arabia",
-		"currencyID": "SAR"
+		"currencyID": "SAR",
+		"currencyName": "Saudi riyal"
 	},
 	{
 		"id": "SG",
 		"name": "Singapore",
-		"currencyID": "SGD"
+		"currencyID": "SGD",
+		"currencyName": "Singapore dollar"
 	},
 	{
 		"id": "ZA",
 		"name": "South Africa",
-		"currencyID": "ZAR"
+		"currencyID": "ZAR",
+		"currencyName": "South African rand"
 	},
 	{
 		"id": "SR",
 		"name": "Suriname",
-		"currencyID": "SRD"
+		"currencyID": "SRD",
+		"currencyName": "Surinamese dollar"
 	},
 	{
 		"id": "TW",
 		"name": "Taiwan",
-		"currencyID": "TWD"
+		"currencyID": "TWD",
+		"currencyName": "New Taiwan dollar"
 	},
 	{
 		"id": "TO",
 		"name": "Tonga",
-		"currencyID": "TOP"
+		"currencyID": "TOP",
+		"currencyName": "Paanga"
 	},
 	{
 		"id": "TV",
 		"name": "Tuvalu",
-		"currencyID": "AUD"
+		"currencyID": "AUD",
+		"currencyName": "Australian dollar"
 	},
 	{
 		"id": "US",
 		"name": "United States of America",
-		"currencyID": "USD"
+		"currencyID": "USD",
+		"currencyName": "United States dollar"
 	},
 	{
 		"id": "VN",
 		"name": "Vietnam",
-		"currencyID": "VND"
+		"currencyID": "VND",
+		"currencyName": "Vietnamese dong"
 	},
 	{
 		"id": "AL",
 		"name": "Albania",
-		"currencyID": "ALL"
+		"currencyID": "ALL",
+		"currencyName": "Albanian lek"
 	},
 	{
 		"id": "AG",
 		"name": "Antigua and Barbuda",
-		"currencyID": "XCD"
+		"currencyID": "XCD",
+		"currencyName": "East Caribbean dollar"
 	},
 	{
 		"id": "AT",
 		"name": "Austria",
-		"currencyID": "EUR"
+		"currencyID": "EUR",
+		"currencyName": "European euro"
 	},
 	{
 		"id": "BB",
 		"name": "Barbados",
-		"currencyID": "BBD"
+		"currencyID": "BBD",
+		"currencyName": "Barbadian dollar"
 	},
 	{
 		"id": "BT",
 		"name": "Bhutan",
-		"currencyID": "BTN"
+		"currencyID": "BTN",
+		"currencyName": "Bhutanese ngultrum"
 	},
 	{
 		"id": "BN",
 		"name": "Brunei",
-		"currencyID": "BND"
+		"currencyID": "BND",
+		"currencyName": "Brunei dollar"
 	},
 	{
 		"id": "CM",
 		"name": "Cameroon",
-		"currencyID": "XAF"
+		"currencyID": "XAF",
+		"currencyName": "Central African CFA franc"
 	},
 	{
 		"id": "CL",
 		"name": "Chile",
-		"currencyID": "CLP"
+		"currencyID": "CLP",
+		"currencyName": "Chilean peso"
 	},
 	{
 		"id": "CD",
 		"name": "Congo, Democratic Republic",
-		"currencyID": "CDF"
+		"currencyID": "CDF",
+		"currencyName": "Congolese franc"
 	},
 	{
 		"id": "CY",
 		"name": "Cyprus",
-		"currencyID": "EUR"
+		"currencyID": "EUR",
+		"currencyName": "European euro"
 	},
 	{
 		"id": "DO",
 		"name": "Dominican Republic",
-		"currencyID": "DOP"
+		"currencyID": "DOP",
+		"currencyName": "Dominican peso"
 	},
 	{
 		"id": "ER",
 		"name": "Eritrea",
-		"currencyID": "ERN"
+		"currencyID": "ERN",
+		"currencyName": "Eritrean nakfa"
 	},
 	{
 		"id": "FR",
 		"name": "France",
-		"currencyID": "EUR"
+		"currencyID": "EUR",
+		"currencyName": "European euro"
 	},
 	{
 		"id": "DE",
 		"name": "Germany",
-		"currencyID": "EUR"
+		"currencyID": "EUR",
+		"currencyName": "European euro"
 	},
 	{
 		"id": "GT",
 		"name": "Guatemala",
-		"currencyID": "GTQ"
+		"currencyID": "GTQ",
+		"currencyName": "Guatemalan quetzal"
 	},
 	{
 		"id": "HN",
 		"name": "Honduras",
-		"currencyID": "HNL"
+		"currencyID": "HNL",
+		"currencyName": "Honduran lempira"
 	},
 	{
 		"id": "ID",
 		"name": "Indonesia",
-		"currencyID": "IDR"
+		"currencyID": "IDR",
+		"currencyName": "Indonesian rupiah"
 	},
 	{
 		"id": "IT",
 		"name": "Italy",
-		"currencyID": "EUR"
+		"currencyID": "EUR",
+		"currencyName": "European euro"
 	},
 	{
 		"id": "KE",
 		"name": "Kenya",
-		"currencyID": "KES"
+		"currencyID": "KES",
+		"currencyName": "Kenyan shilling"
 	},
 	{
 		"id": "KG",
 		"name": "Kyrgyzstan",
-		"currencyID": "KGS"
+		"currencyID": "KGS",
+		"currencyName": "Kyrgyzstani som"
 	},
 	{
 		"id": "LR",
 		"name": "Liberia",
-		"currencyID": "LRD"
+		"currencyID": "LRD",
+		"currencyName": "Liberian dollar"
 	},
 	{
 		"id": "MO",
 		"name": "Macau",
-		"currencyID": "MOP"
+		"currencyID": "MOP",
+		"currencyName": "Macanese pataca"
 	},
 	{
 		"id": "MV",
 		"name": "Maldives",
-		"currencyID": "MVR"
+		"currencyID": "MVR",
+		"currencyName": "Maldivian rufiyaa"
 	},
 	{
 		"id": "MX",
 		"name": "Mexico",
-		"currencyID": "MXN"
+		"currencyID": "MXN",
+		"currencyName": "Mexican peso"
 	},
 	{
 		"id": "ME",
 		"name": "Montenegro",
-		"currencyID": "EUR"
+		"currencyID": "EUR",
+		"currencyName": "European Euro"
 	},
 	{
 		"id": "NA",
 		"name": "Namibia",
-		"currencyID": "NAD"
+		"currencyID": "NAD",
+		"currencyName": "Namibian dollar"
 	},
 	{
 		"id": "NZ",
 		"name": "New Zealand",
-		"currencyID": "NZD"
+		"currencyID": "NZD",
+		"currencyName": "New Zealand dollar"
 	},
 	{
 		"id": "OM",
 		"name": "Oman",
-		"currencyID": "OMR"
+		"currencyID": "OMR",
+		"currencyName": "Omani rial"
 	},
 	{
 		"id": "PY",
 		"name": "Paraguay",
-		"currencyID": "PYG"
+		"currencyID": "PYG",
+		"currencyName": "Paraguayan guarani"
 	},
 	{
 		"id": "PR",
 		"name": "Puerto Rico",
-		"currencyID": "USD"
+		"currencyID": "USD",
+		"currencyName": "U.S. Dollar"
 	},
 	{
 		"id": "SH",
 		"name": "Saint Helena",
-		"currencyID": "SHP"
+		"currencyID": "SHP",
+		"currencyName": "Saint Helena pound"
 	},
 	{
 		"id": "SM",
 		"name": "San Marino",
-		"currencyID": "EUR"
+		"currencyID": "EUR",
+		"currencyName": "European euro"
 	},
 	{
 		"id": "SC",
 		"name": "Seychelles",
-		"currencyID": "SCR"
+		"currencyID": "SCR",
+		"currencyName": "Seychellois rupee"
 	},
 	{
 		"id": "SB",
 		"name": "Solomon Islands",
-		"currencyID": "SBD"
+		"currencyID": "SBD",
+		"currencyName": "Solomon Islands dollar"
 	},
 	{
 		"id": "LK",
 		"name": "Sri Lanka",
-		"currencyID": "LKR"
+		"currencyID": "LKR",
+		"currencyName": "Sri Lankan rupee"
 	},
 	{
 		"id": "CH",
 		"name": "Switzerland",
-		"currencyID": "CHF"
+		"currencyID": "CHF",
+		"currencyName": "Swiss franc"
 	},
 	{
 		"id": "TH",
 		"name": "Thailand",
-		"currencyID": "THB"
+		"currencyID": "THB",
+		"currencyName": "Thai baht"
 	},
 	{
 		"id": "TR",
 		"name": "Turkey",
-		"currencyID": "TRY"
+		"currencyID": "TRY",
+		"currencyName": "Turkish new lira"
 	},
 	{
 		"id": "AE",
 		"name": "United Arab Emirates",
-		"currencyID": "AED"
+		"currencyID": "AED",
+		"currencyName": "UAE dirham"
 	},
 	{
 		"id": "VU",
 		"name": "Vanuatu",
-		"currencyID": "VUV"
+		"currencyID": "VUV",
+		"currencyName": "Vanuatu vatu"
 	},
 	{
 		"id": "ZM",
 		"name": "Zambia",
-		"currencyID": "ZMW"
+		"currencyID": "ZMW",
+		"currencyName": "Zambian kwacha"
 	},
 	{
 		"id": "AO",
 		"name": "Angola",
-		"currencyID": "AOA"
+		"currencyID": "AOA",
+		"currencyName": "Angolan kwanza"
 	},
 	{
 		"id": "AW",
 		"name": "Aruba",
-		"currencyID": "AWG"
+		"currencyID": "AWG",
+		"currencyName": "Aruban florin"
 	},
 	{
 		"id": "BH",
 		"name": "Bahrain",
-		"currencyID": "BHD"
+		"currencyID": "BHD",
+		"currencyName": "Bahraini dinar"
 	},
 	{
 		"id": "BZ",
 		"name": "Belize",
-		"currencyID": "BZD"
+		"currencyID": "BZD",
+		"currencyName": "Belize dollar"
 	},
 	{
 		"id": "BW",
 		"name": "Botswana",
-		"currencyID": "BWP"
+		"currencyID": "BWP",
+		"currencyName": "Botswana pula"
 	},
 	{
 		"id": "BI",
 		"name": "Burundi",
-		"currencyID": "BIF"
+		"currencyID": "BIF",
+		"currencyName": "Burundi franc"
 	},
 	{
 		"id": "CF",
 		"name": "Central African Republic",
-		"currencyID": "XAF"
+		"currencyID": "XAF",
+		"currencyName": "Central African CFA franc"
 	},
 	{
 		"id": "KM",
 		"name": "Comoros",
-		"currencyID": "KMF"
+		"currencyID": "KMF",
+		"currencyName": "Comorian franc"
 	},
 	{
 		"id": "HR",
 		"name": "Croatia",
-		"currencyID": "HRK"
+		"currencyID": "HRK",
+		"currencyName": "Croatian kuna"
 	},
 	{
 		"id": "DJ",
 		"name": "Djibouti",
-		"currencyID": "DJF"
+		"currencyID": "DJF",
+		"currencyName": "Djiboutian franc"
 	},
 	{
 		"id": "SV",
 		"name": "El Salvador",
-		"currencyID": "USD"
+		"currencyID": "USD",
+		"currencyName": "U.S. Dollar"
 	},
 	{
 		"id": "FJ",
 		"name": "Fiji",
-		"currencyID": "FJD"
+		"currencyID": "FJD",
+		"currencyName": "Fijian dollar"
 	},
 	{
 		"id": "GM",
 		"name": "Gambia",
-		"currencyID": "GMD"
+		"currencyID": "GMD",
+		"currencyName": "Gambian dalasi"
 	},
 	{
 		"id": "GR",
 		"name": "Greece",
-		"currencyID": "EUR"
+		"currencyID": "EUR",
+		"currencyName": "European euro"
 	},
 	{
 		"id": "GY",
 		"name": "Guyana",
-		"currencyID": "GYD"
+		"currencyID": "GYD",
+		"currencyName": "Guyanese dollar"
 	},
 	{
 		"id": "IS",
 		"name": "Iceland",
-		"currencyID": "ISK"
+		"currencyID": "ISK",
+		"currencyName": "Icelandic króna"
 	},
 	{
 		"id": "IE",
 		"name": "Ireland",
-		"currencyID": "EUR"
+		"currencyID": "EUR",
+		"currencyName": "European euro"
 	},
 	{
 		"id": "JO",
 		"name": "Jordan",
-		"currencyID": "JOD"
+		"currencyID": "JOD",
+		"currencyName": "Jordanian dinar"
 	},
 	{
 		"id": "KR",
 		"name": "Korea South",
-		"currencyID": "KRW"
+		"currencyID": "KRW",
+		"currencyName": "South Korean won"
 	},
 	{
 		"id": "LB",
 		"name": "Lebanon",
-		"currencyID": "LBP"
+		"currencyID": "LBP",
+		"currencyName": "Lebanese lira"
 	},
 	{
 		"id": "MW",
 		"name": "Malawi",
-		"currencyID": "MWK"
+		"currencyID": "MWK",
+		"currencyName": "Malawian kwacha"
 	},
 	{
 		"id": "MR",
 		"name": "Mauritania",
-		"currencyID": "MRO"
+		"currencyID": "MRO",
+		"currencyName": "Mauritanian ouguiya"
 	},
 	{
 		"id": "MC",
 		"name": "Monaco",
-		"currencyID": "EUR"
+		"currencyID": "EUR",
+		"currencyName": "European Euro"
 	},
 	{
 		"id": "MZ",
 		"name": "Mozambique",
-		"currencyID": "MZN"
+		"currencyID": "MZN",
+		"currencyName": "Mozambican metical"
 	},
 	{
 		"id": "NL",
 		"name": "Netherlands",
-		"currencyID": "EUR"
+		"currencyID": "EUR",
+		"currencyName": "European euro"
 	},
 	{
 		"id": "NG",
 		"name": "Nigeria",
-		"currencyID": "NGN"
+		"currencyID": "NGN",
+		"currencyName": "Nigerian naira"
 	},
 	{
 		"id": "PA",
 		"name": "Panama",
-		"currencyID": "PAB"
+		"currencyID": "PAB",
+		"currencyName": "Panamanian balboa"
 	},
 	{
 		"id": "PL",
 		"name": "Poland",
-		"currencyID": "PLN"
+		"currencyID": "PLN",
+		"currencyName": "Polish zloty"
 	},
 	{
 		"id": "RU",
 		"name": "Russia",
-		"currencyID": "RUB"
+		"currencyID": "RUB",
+		"currencyName": "Russian ruble"
 	},
 	{
 		"id": "VC",
 		"name": "Saint Vincent and the Grenadines",
-		"currencyID": "XCD"
+		"currencyID": "XCD",
+		"currencyName": "East Caribbean dollar"
 	},
 	{
 		"id": "SN",
 		"name": "Senegal",
-		"currencyID": "XOF"
+		"currencyID": "XOF",
+		"currencyName": "West African CFA franc"
 	},
 	{
 		"id": "SK",
 		"name": "Slovakia",
-		"currencyID": "EUR"
+		"currencyID": "EUR",
+		"currencyName": "European euro"
 	},
 	{
 		"id": "SS",
 		"name": "South Sudan",
-		"currencyID": "SDG"
+		"currencyID": "SDG",
+		"currencyName": "Sudanese pound"
 	},
 	{
 		"id": "SZ",
 		"name": "Swaziland",
-		"currencyID": "SZL"
+		"currencyID": "SZL",
+		"currencyName": "Swazi lilangeni"
 	},
 	{
 		"id": "TJ",
 		"name": "Tajikistan",
-		"currencyID": "TJS"
+		"currencyID": "TJS",
+		"currencyName": "Tajikistani somoni"
 	},
 	{
 		"id": "TT",
 		"name": "Trinidad and Tobago",
-		"currencyID": "TTD"
+		"currencyID": "TTD",
+		"currencyName": "Trinidad and Tobago dollar"
 	},
 	{
 		"id": "UG",
 		"name": "Uganda",
-		"currencyID": "UGX"
+		"currencyID": "UGX",
+		"currencyName": "Ugandan shilling"
 	},
 	{
 		"id": "UY",
 		"name": "Uruguay",
-		"currencyID": "UYU"
+		"currencyID": "UYU",
+		"currencyName": "Uruguayan peso"
 	},
 	{
 		"id": "WF",
 		"name": "Wallis and Futuna Islands",
-		"currencyID": "XPF"
+		"currencyID": "XPF",
+		"currencyName": "CFP franc"
 	},
 	{
 		"id": "LT",
 		"name": "Lithuania",
-		"currencyID": "EUR"
+		"currencyID": "EUR",
+		"currencyName": "European euro"
 	}
 ]

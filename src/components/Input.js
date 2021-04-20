@@ -1,24 +1,26 @@
 import React, {useState, useEffect} from 'react';
-import { Select} from "antd";
+import {Select} from "antd";
 import {Requests} from "./Requests";
 import DB from './CountryObject.json';
+
 const {Option} = Select;
 const FlagArray = [];
 
-    function Flag(name) {
-        this.name = name;
+class Flag{
+    constructor(name) {
+        this.name = name
     }
+}
 
-    for(let i in DB){
-        let small_id = `${DB[i].id}`.toLocaleLowerCase()
+for (let i in DB) {
+    let small_id = DB[i].id.toLocaleLowerCase()
+    import('../img/' + small_id + '.png')
+        .then(module => {
+            FlagArray.push(new Flag(module.default))
+        })
+}
 
-        import('../img/'+small_id+'.png')
-
-            .then(module => {FlagArray.push(new Flag(module.default))})
-
-    }
-
-export const InputValue = ({ setCurrency, setFlag }) => {
+export const InputValue = ({setCurrency, setFlag}) => {
 
     const [currencies, setCurrencies] = useState([]);
 
@@ -30,9 +32,9 @@ export const InputValue = ({ setCurrency, setFlag }) => {
 
         setCurrency(object.currencyid);
         setValue(object.currencyid);
-        for(let i in DB){
+        for (let i in DB) {
 
-            if(`${DB[i].id}` == object.flag){
+            if (DB[i].id === object.flag) {
 
                 setFlag(FlagArray[count].name)
             }
@@ -44,8 +46,7 @@ export const InputValue = ({ setCurrency, setFlag }) => {
     useEffect(
         () => {
             const req = new Requests()
-            let array =[];
-
+            let array = [];
 
 
             // req.GetCurrenciesAPI().then((data)=>{
@@ -72,7 +73,7 @@ export const InputValue = ({ setCurrency, setFlag }) => {
             //     setCurrencies(array)
             // })
 
-             setCurrencies(req.GEtCurrenciesJson())
+            setCurrencies(req.GEtCurrenciesJson())
 
 
         }, []
@@ -80,7 +81,7 @@ export const InputValue = ({ setCurrency, setFlag }) => {
     return (
         <Select
             showSearch
-            value = {inputValue}
+            value={inputValue}
             style={{
                 width: "120px",
                 margin: '0 8px',
