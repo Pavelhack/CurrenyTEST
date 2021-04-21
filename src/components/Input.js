@@ -7,7 +7,8 @@ const {Option} = Select;
 const FlagArray = [];
 
 class Flag{
-    constructor(name) {
+    constructor(hash, name) {
+        this.hash = hash
         this.name = name
     }
 }
@@ -16,29 +17,29 @@ for (let i in DB) {
     let small_id = DB[i].id.toLocaleLowerCase()
     import('../img/' + small_id + '.png')
         .then(module => {
-            FlagArray.push(new Flag(module.default))
+            FlagArray.push(new Flag(module.default, small_id))
         })
 }
 
-export const InputValue = ({setCurrency, setFlag}) => {
+export const InputValue = ({setCurrency, setCurrentCountry, setCurrencyName, setFlag}) => {
 
     const [currencies, setCurrencies] = useState([]);
 
     const [inputValue, setValue] = useState('currency');
 
-    let count = 0;
 
     function onChange(value, object) {
-
+        console.log(object.currencyname)
+        setCurrencyName(object.currencyname)
+        setCurrentCountry(object.key)
         setCurrency(object.currencyid);
         setValue(object.currencyid);
         for (let i in DB) {
 
             if (DB[i].id === object.flag) {
-
-                setFlag(FlagArray[count].name)
+                const goal = FlagArray.find(elem => elem.name === object.flag.toLocaleLowerCase())
+                setFlag(goal.hash)
             }
-            count++
         }
 
     }

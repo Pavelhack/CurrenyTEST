@@ -7,10 +7,7 @@ import JPY_flag from '../img/jp.png';
 
 import React from "react";
 
-export const PopularCurrencies = ({usd , eur, gbp, rub, cny, jpy}) =>{
-    console.log(usd,eur)
-    const PopularCurrencies = ["USD","EUR","GBP","RUB","BYN","CNY"];
-
+export const PopularCurrencies = ({usd , eur, gbp, rub, cny, jpy, flag}) =>{
     return(
         <div className={"table"}>
             <div className={"table_column flag"}>
@@ -56,6 +53,26 @@ export const PopularCurrencies = ({usd , eur, gbp, rub, cny, jpy}) =>{
                 <div className={"rows rate_rows"}>{rub}</div>
                 <div className={"rows rate_rows"}>{cny}</div>
                 <div className={"rows rate_rows"}>{jpy}</div>
+            </div>
+            <div className={"table_column flag"}>
+                <div className={"rows flag_rows"}>
+                    <img src = {flag}/>
+                </div>
+                <div className={"rows flag_rows"}>
+                    <img src = {flag}/>
+                </div>
+                <div className={"rows flag_rows"}>
+                    <img src = {flag}/>
+                </div>
+                <div className={"rows flag_rows"}>
+                    <img src = {flag}/>
+                </div>
+                <div className={"rows flag_rows"}>
+                    <img src = {flag}/>
+                </div>
+                <div className={"rows flag_rows"}>
+                    <img src = {flag}/>
+                </div>
             </div>
         </div>
     )
