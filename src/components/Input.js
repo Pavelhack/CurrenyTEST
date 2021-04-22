@@ -29,7 +29,7 @@ export const InputValue = ({setCurrency, setCurrentCountry, setCurrencyName, set
 
 
     function onChange(value, object) {
-        console.log(object.currencyname)
+
         setCurrencyName(object.currencyname)
         setCurrentCountry(object.key)
         setCurrency(object.currencyid);
@@ -47,9 +47,8 @@ export const InputValue = ({setCurrency, setCurrentCountry, setCurrencyName, set
     useEffect(
         () => {
             const req = new Requests()
-            let array = [];
 
-
+            // let array = [];
             // req.GetCurrenciesAPI().then((data)=>{
             //
             //     for (let i in data.results) {

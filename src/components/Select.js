@@ -2,6 +2,7 @@ import React, {useState, useEffect, useRef} from 'react';
 import {InputValue} from './Input'
 import {Requests} from "./Requests";
 import {PopularCurrencies} from "./PopularCurrencies";
+import {Graph} from "./Graph";
 import BY_flag from '../img/by.png';
 
 export const SelectForm = () =>{
@@ -68,6 +69,7 @@ return(
             <InputValue setCurrency = {setCurrencyDefault} setCurrentCountry={setCurrentCountry} setCurrencyName = {setCurrencyName}setFlag={setFlag}/>
         </div>
         <PopularCurrencies usd = {usd} eur = {eur} gbp = {gbp} rub = {rub} cny = {cny} jpy = {jpy} flag={flag}/>
+        <Graph></Graph>
 
     </div>
 );

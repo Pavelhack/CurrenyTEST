@@ -7,9 +7,6 @@ import {Route, Switch} from "react-router-dom"
 
 
 export const App = () => {
-
-
-
     return (
         <div className="App">
             <Header/>
