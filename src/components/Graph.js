@@ -4,18 +4,28 @@ import HighchartsReact from 'highcharts-react-official';
 import './Graph.css';
 
 export const Graph = ({usd , eur, gbp, rub, cny, jpy}) =>{
-    const $ = [];
-    const e = [];
+    const us = [];
+    const eu = [];
+    const gp = [];
+    const ru = [];
+    const cn = [];
+    const jp = [];
 
-    function getRandomIntInclusive(min, max) {
-        return Math.ceil((Math.random() * (max - min) + min) *100000)/100000 ; //Максимум и минимум включаются
+    const ratCurrencies = [us , eu, gp, ru, cn, jp];
+    const currencies = [usd , eur, gbp, rub, cny, jpy]
+
+    function getRandomArray( $, min, max) {
+        for(let i = 0; i <= 9; i++){
+            $.push(Math.ceil((Math.random() * (max - min) + min) *100000)/100000)
+        }
     }
-    for(let i = 0; i <= 9; i++){
-        $.push(getRandomIntInclusive(usd/1.1, usd))
+
+    for(let i = 0; i<= ratCurrencies.length - 1; i++){
+        getRandomArray(ratCurrencies[i],currencies[i]/1.1, currencies[i])
     }
-    for(let i = 0; i <= 9; i++){
-        e.push(getRandomIntInclusive(eur/1.1, eur))
-    }
+
+    // ratCurrencies.forEach((e => getRandomIntInclusive(e/1.1, e)) )
+    console.log(currencies)
 
     const options ={
         title: {
@@ -56,28 +66,32 @@ export const Graph = ({usd , eur, gbp, rub, cny, jpy}) =>{
         series: [{
             name: 'U.S.Dollar',
             //data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175, 92503, 107177]
-            data: $
+            data: us
         }, {
             name: 'European Euro',
             // data: [24916, 24064, 29742, 39851, 42490, 50282, 78121, 80434, 90851, 122490]
-            data: e
+            data: eu
         },
-        //     {
-        //     name: 'British pound',
-        //     data: [44916, 64064, 89742, 109851, 122490, 150282, 158121, 140434, 130851, 152490]
-        // },
-        //     {
-        //     name: 'Russian Ruble',
-        //     data: [11744, 17722, 16005, 19771, 20185, 24377, 32147, 39387, 17722, 16005]
-        // },
-        //     {
-        //     name: 'China Chinese Renminbi',
-        //     data: [null, null, 7988, 12169, 15112, 22452, 34400, 34227, 12169, 15112]
-        // },
-        //     {
-        //     name: 'Japanese Yen',
-        //     data: [12908, 5948, 8105, 11248, 8989, 11816, 18274, 18111, 8105, 11248]
-        // }
+            {
+            name: 'British pound',
+            // data: [44916, 64064, 89742, 109851, 122490, 150282, 158121, 140434, 130851, 152490]
+            data: gp
+        },
+            {
+            name: 'Russian Ruble',
+            // data: [11744, 17722, 16005, 19771, 20185, 24377, 32147, 39387, 17722, 16005]
+                data: ru
+        },
+            {
+            name: 'China Chinese Renminbi',
+            // data: [null, null, 7988, 12169, 15112, 22452, 34400, 34227, 12169, 15112]
+                data: cn
+        },
+            {
+            name: 'Japanese Yen',
+            // data: [12908, 5948, 8105, 11248, 8989, 11816, 18274, 18111, 8105, 11248]
+                data: jp
+        }
         ],
 
         chart: {

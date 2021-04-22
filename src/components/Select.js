@@ -41,15 +41,15 @@ export const SelectForm = () =>{
                 }
             });
 
-            // req.GetRateForGBPRUB(currencyDefault).then(result =>{
-            //     setGBP(result.results[`GBP_${currencyDefault}`].val);
-            //     setRUB(result.results[`RUB_${currencyDefault}`].val);
-            // });
-            //
-            // req.GetRateForCNYJPY(currencyDefault).then(result =>{
-            //     setCNY(result.results[`CNY_${currencyDefault}`].val);
-            //     setJPY(result.results[`JPY_${currencyDefault}`].val);
-            // });
+            req.GetRateForGBPRUB(currencyDefault).then(result =>{
+                setGBP(result.results[`GBP_${currencyDefault}`].val);
+                setRUB(result.results[`RUB_${currencyDefault}`].val);
+            });
+
+            req.GetRateForCNYJPY(currencyDefault).then(result =>{
+                setCNY(result.results[`CNY_${currencyDefault}`].val);
+                setJPY(result.results[`JPY_${currencyDefault}`].val);
+            });
 
         },[currencyDefault]
 
