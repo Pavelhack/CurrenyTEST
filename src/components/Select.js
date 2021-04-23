@@ -19,11 +19,11 @@ export const SelectForm = () =>{
 
     const [gbp, setGBP] = useState(null);
 
-    const [rub, setRUB] = useState(null);
+    const [aud, setAUD] = useState(null);
 
-    const [cny, setCNY] = useState(null);
+    const [cad, setCAD] = useState(null);
 
-    const [jpy, setJPY] = useState(null);
+    const [chf, setCHF] = useState(null);
 
     const [flag, setFlag] = useState(BY_flag)
 
@@ -42,19 +42,28 @@ export const SelectForm = () =>{
             });
 
             req.GetRateForGBPRUB(currencyDefault).then(result =>{
-                setGBP(result.results[`GBP_${currencyDefault}`].val);
-                setRUB(result.results[`RUB_${currencyDefault}`].val);
+                if(result === "Online Services Temporarily unavailable"){
+                    setUSD(result);
+                    setEUR(result);
+                }else {
+                    setGBP(result.results[`GBP_${currencyDefault}`].val);
+                    setAUD(result.results[`AUD_${currencyDefault}`].val);
+                }
             });
 
             req.GetRateForCNYJPY(currencyDefault).then(result =>{
-                setCNY(result.results[`CNY_${currencyDefault}`].val);
-                setJPY(result.results[`JPY_${currencyDefault}`].val);
+                if(result === "Online Services Temporarily unavailable"){
+                    setUSD(result);
+                    setEUR(result);
+                }else {
+                    setCAD(result.results[`CAD_${currencyDefault}`].val);
+                    setCHF(result.results[`CHF_${currencyDefault}`].val);
+                }
             });
 
         },[currencyDefault]
 
     )
-
 
 
 return(
@@ -68,8 +77,8 @@ return(
         <div>
             <InputValue setCurrency = {setCurrencyDefault} setCurrentCountry={setCurrentCountry} setCurrencyName = {setCurrencyName}setFlag={setFlag}/>
         </div>
-        <PopularCurrencies usd = {usd} eur = {eur} gbp = {gbp} rub = {rub} cny = {cny} jpy = {jpy} flag={flag}/>
-        <Graph usd = {usd} eur = {eur} gbp = {gbp} rub = {rub} cny = {cny} jpy = {jpy}></Graph>
+        <PopularCurrencies usd = {usd} eur = {eur} gbp = {gbp} aud = {aud} cad = {cad} chf = {chf} flag={flag}/>
+        <Graph usd = {usd} eur = {eur} gbp = {gbp} aud = {aud} cad = {cad} chf = {chf}/>
 
     </div>
 );

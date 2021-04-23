@@ -1,18 +1,18 @@
-import React, {useState} from 'react'
+import React from 'react'
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import './Graph.css';
 
-export const Graph = ({usd , eur, gbp, rub, cny, jpy}) =>{
+export const Graph = ({usd , eur, gbp, aud, cad, chf}) =>{
     const us = [];
     const eu = [];
     const gp = [];
-    const ru = [];
-    const cn = [];
-    const jp = [];
+    const ad = [];
+    const ca = [];
+    const cf = [];
 
-    const ratCurrencies = [us , eu, gp, ru, cn, jp];
-    const currencies = [usd , eur, gbp, rub, cny, jpy]
+    const ratCurrencies = [us , eu, gp, ad, ca, cf];
+    const currencies = [usd , eur, gbp, aud, cad, chf]
 
     function getRandomArray( $, min, max) {
         for(let i = 0; i <= 9; i++){
@@ -23,9 +23,6 @@ export const Graph = ({usd , eur, gbp, rub, cny, jpy}) =>{
     for(let i = 0; i<= ratCurrencies.length - 1; i++){
         getRandomArray(ratCurrencies[i],currencies[i]/1.1, currencies[i])
     }
-
-    // ratCurrencies.forEach((e => getRandomIntInclusive(e/1.1, e)) )
-    console.log(currencies)
 
     const options ={
         title: {
@@ -65,32 +62,26 @@ export const Graph = ({usd , eur, gbp, rub, cny, jpy}) =>{
 
         series: [{
             name: 'U.S.Dollar',
-            //data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175, 92503, 107177]
             data: us
         }, {
             name: 'European Euro',
-            // data: [24916, 24064, 29742, 39851, 42490, 50282, 78121, 80434, 90851, 122490]
             data: eu
         },
             {
             name: 'British pound',
-            // data: [44916, 64064, 89742, 109851, 122490, 150282, 158121, 140434, 130851, 152490]
             data: gp
         },
             {
-            name: 'Russian Ruble',
-            // data: [11744, 17722, 16005, 19771, 20185, 24377, 32147, 39387, 17722, 16005]
-                data: ru
+            name: 'Australian dollar',
+                data: ad
         },
             {
-            name: 'China Chinese Renminbi',
-            // data: [null, null, 7988, 12169, 15112, 22452, 34400, 34227, 12169, 15112]
-                data: cn
+            name: 'Canadian dollar',
+                data: ca
         },
             {
-            name: 'Japanese Yen',
-            // data: [12908, 5948, 8105, 11248, 8989, 11816, 18274, 18111, 8105, 11248]
-                data: jp
+            name: 'Swiss franc',
+                data: cf
         }
         ],
 

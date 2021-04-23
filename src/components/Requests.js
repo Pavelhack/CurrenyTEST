@@ -41,7 +41,7 @@ export class Requests{
     };
 
     GetRateForGBPRUB = async ( curr ) =>{
-        let res = await fetch(`https://free.currconv.com/api/v7/convert?apiKey=cc1c42623e7c44a5dccf&q=GBP_${curr},RUB_${curr}`);
+        let res = await fetch(`https://free.currconv.com/api/v7/convert?apiKey=cc1c42623e7c44a5dccf&q=GBP_${curr},AUD_${curr}`);
         if (res.ok) {
             let result = await res.json();
             return result
@@ -52,7 +52,7 @@ export class Requests{
 
 
     GetRateForCNYJPY = async ( curr ) =>{
-        let res = await fetch(`https://free.currconv.com/api/v7/convert?apiKey=cc1c42623e7c44a5dccf&q=CNY_${curr},JPY_${curr}`);
+        let res = await fetch(`https://free.currconv.com/api/v7/convert?apiKey=cc1c42623e7c44a5dccf&q=CAD_${curr},CHF_${curr}`);
         if (res.ok) {
             let result = await res.json();
             return result
