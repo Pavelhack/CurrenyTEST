@@ -3,9 +3,10 @@ import {InputValue} from './Input'
 import {Requests} from "./Requests";
 import {PopularCurrencies} from "./PopularCurrencies";
 import {Graph} from "./Graph";
+import {Bitcoin} from './BitcoinInfo'
 import BY_flag from '../img/by.png';
 
-export const SelectForm = () =>{
+export const Main = () =>{
 
     const [currencyDefault, setCurrencyDefault] = useState("BYN");
 
@@ -62,13 +63,15 @@ export const SelectForm = () =>{
             });
 
         },[currencyDefault]
-
     )
 
 
 return(
     <div>
         <div className = "info">
+            <div>
+                <Bitcoin/>
+            </div>
             <div>
                 <h1>current currency  {currentCountry} {currencyName} {currencyDefault}</h1>
                 <img src = {flag}/>
@@ -77,8 +80,12 @@ return(
         <div>
             <InputValue setCurrency = {setCurrencyDefault} setCurrentCountry={setCurrentCountry} setCurrencyName = {setCurrencyName}setFlag={setFlag}/>
         </div>
-        <PopularCurrencies usd = {usd} eur = {eur} gbp = {gbp} aud = {aud} cad = {cad} chf = {chf} flag={flag}/>
-        <Graph usd = {usd} eur = {eur} gbp = {gbp} aud = {aud} cad = {cad} chf = {chf}/>
+        <div>
+            <PopularCurrencies usd = {usd} eur = {eur} gbp = {gbp} aud = {aud} cad = {cad} chf = {chf} flag={flag}/>
+        </div>
+        <div>
+            <Graph usd = {usd} eur = {eur} gbp = {gbp} aud = {aud} cad = {cad} chf = {chf}/>
+        </div>
 
     </div>
 );

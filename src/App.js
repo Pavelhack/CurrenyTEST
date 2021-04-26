@@ -1,6 +1,6 @@
 import './App.css';
 import React, {useState} from "react"
-import {SelectForm} from "./components/Select";
+import {Main, SelectForm} from "./components/Main";
 import {InfoRate} from "./components/InfoRate";
 import {Header} from "./components/Header";
 import {Route, Switch} from "react-router-dom"
@@ -15,7 +15,7 @@ export const App = () => {
                 <Switch>
 
                     <Route exact path="/">
-                        <SelectForm />
+                        <Main />
                     </Route>
 
                     <Route exact path="/InfoRate">
