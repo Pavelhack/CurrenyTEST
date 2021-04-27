@@ -16,10 +16,8 @@ export  const Bitcoin = () =>{
 
     const [iteration, setIteration] = useState(0);
 
-    // const [active, setActive] = useState('');
+    const [active, setActive] = useState('red')
 
-    const [rate, setRate] = useState(0)
-    
     let usdPreviousValue = useRef()
 
     bitcoin.forEach(elem => {
@@ -68,20 +66,6 @@ export  const Bitcoin = () =>{
         },[]
     )
 
-    // useEffect(
-        
-    //     ()=>{
-    //         if( usd.rate > usdPreviousValue.current ){
-    //             setActive("green")
-    //         }
-            
-    //         if(usdPreviousValue.current > usd.rate)
-    //         {
-    //             setActive("red")
-    //         }
-    //     },[rate]
-    // )
-
     useEffect(
         () =>{
             setTimeout(()=>{
@@ -103,10 +87,6 @@ export  const Bitcoin = () =>{
         },[iteration],
     )
 
-    // let active = ''
-
-    const [active, setActive] = useState()
-    console.log(+usd.rate - +usdPreviousValue.current)
     if(+usd.rate > +usdPreviousValue.current && active !== "green"){
        setActive("green")
     }
