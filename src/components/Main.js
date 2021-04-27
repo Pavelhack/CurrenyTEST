@@ -68,11 +68,12 @@ export const Main = () =>{
 
 return(
     <div>
-        <div className = "info">
-            <div>
-                <Bitcoin/>
-            </div>
-            <div>
+        <div className = "main-info">
+            <div>Bitcoin Rate</div>
+
+            <Bitcoin/>
+            
+            <div className  = {"main-info__current-currency"}>
                 <h1>current currency  {currentCountry} {currencyName} {currencyDefault}</h1>
                 <img src = {flag}/>
             </div>

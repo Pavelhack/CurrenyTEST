@@ -60,6 +60,28 @@
   pointer-events: none;
 }
 
+.main-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-info__current-currency {
+  margin-top: 40px;
+}
+
+.bitcoinInfo {
+  display: flex;
+  justify-content: space-around;
+}
+
+.green {
+  background-color: green;
+}
+
+.red {
+  background-color: red;
+}
+
 .table {
   display: grid;
   grid-template-rows: 1fr;

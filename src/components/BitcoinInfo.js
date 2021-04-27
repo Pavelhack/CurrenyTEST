@@ -1,32 +1,60 @@
-import React,{useEffect, useState} from 'react';
+import React,{useEffect, useState, useRef} from 'react';
 import {Requests} from "./Requests";
 
-// class BitcoinRate {
-//     constructor(object){
-//         //this.currency = object
-//         this.code = object["code"]
-//         this.symbol = object["symbol"]
-//         this.rate = object["rate"]
-//         this.description = object["description"]
-//         this.rate_float = object["rate_float"]
-//     }
-// };
-
-        
-
 export  const Bitcoin = () =>{
+    const array = [];
 
-    let array = [];
+    const usd = {};
+
+    const gbp = {};
+
+    const eur = {};
 
     const [bitcoin, setBitcoin] = useState([]);
 
-    bitcoin.forEach(elem => console.log(elem.code, elem.symbol, elem.rate))
+    const timer = 3500; 
+
+    const [iteration, setIteration] = useState(0);
+
+    // const [active, setActive] = useState('');
+
+    const [rate, setRate] = useState(0)
+    
+    let usdPreviousValue = useRef()
+
+    bitcoin.forEach(elem => {
+        if(elem.code === "USD"){
+            for(let i in elem){
+                usd.code = elem.code;
+                usd.symbol = elem.symbol;
+                usd.rate = elem.rate.replaceAll(',','');
+                usd.description = elem.description;
+            }
+        }
+        if(elem.code === "GBP"){
+            for(let i in elem){
+                gbp.code = elem.code;
+                gbp.symbol = elem.symbol;
+                gbp.rate = elem.rate.replaceAll(',','');
+                gbp.description = elem.description;
+            }
+        }
+        if(elem.code === "EUR"){
+            for(let i in elem){
+                eur.code = elem.code;
+                eur.symbol = elem.symbol;
+                eur.rate = elem.rate.replaceAll(',','');
+                eur.description = elem.description;
+            }
+        }
+        
+    })
 
 
-useEffect(
-    () =>{
-            const req = new Requests()
-
+    useEffect(
+        
+        ()=>{
+            const req = new Requests();
             req.GetBitcoin().then(data => {
                 for(let i in data){
                     if(i === "bpi"){
@@ -35,16 +63,81 @@ useEffect(
                         }
                     }
                 }
+                setBitcoin(array)
             })
-            setBitcoin(array)
-
         },[]
     )
+
+    // useEffect(
+        
+    //     ()=>{
+    //         if( usd.rate > usdPreviousValue.current ){
+    //             setActive("green")
+    //         }
+            
+    //         if(usdPreviousValue.current > usd.rate)
+    //         {
+    //             setActive("red")
+    //         }
+    //     },[rate]
+    // )
+
+    useEffect(
+        () =>{
+            setTimeout(()=>{
+                const req = new Requests();
+                req.GetBitcoin().then(data => {
+                    for(let i in data){
+                        if(i === "bpi"){
+                            for(let e in data[i]){
+                                array.push(data[i][e])
+                            }
+                        }
+                    }
+                    usdPreviousValue.current = usd.rate;
+                    setBitcoin(array)
+                    
+                })
+                setIteration(prev=>prev+1)
+            },timer)
+        },[iteration],
+    )
+
+    // let active = ''
+
+    const [active, setActive] = useState()
+    console.log(+usd.rate - +usdPreviousValue.current)
+    if(+usd.rate > +usdPreviousValue.current && active !== "green"){
+       setActive("green")
+    }
+    if(+usdPreviousValue.current > +usd.rate && active !== "red"){
+        setActive("red")
+    }
+
+    
+    
     return (
-    <div>
-        <div>BitcoinRate Now</div>
-                <div>&#36;</div>
-    </div>
+
+        <div className = {"bitcoinInfo"}>
+            <div>
+                    <div dangerouslySetInnerHTML={{__html:usd.symbol}} style = {{color:"gold"}}/>
+                    <div>{usd.code}</div>
+                    <div>{usd.description}</div>
+                    <div className = {active}>{usd.rate}</div>
+            </div>
+            <div>
+                    <div dangerouslySetInnerHTML={{__html:gbp.symbol}} style = {{color:"gold"}}/>
+                    <div>{gbp.code}</div>
+                    <div>{gbp.description}</div>
+                    <div>{gbp.rate}</div>
+            </div>
+            <div>
+                    <div dangerouslySetInnerHTML={{__html:eur.symbol}} style = {{color:"gold"}}/>
+                    <div>{eur.code}</div>
+                    <div>{eur.description}</div>
+                    <div>{eur.rate}</div>
+            </div>
+        </div>
     
     )
 }
