@@ -1,5 +1,6 @@
-import React,{useEffect, useState, useRef} from 'react';
+import React,{useEffect, useState, useRef, Fragment} from 'react';
 import {Requests} from "./Requests";
+
 
 export  const Bitcoin = () =>{
     const array = [];
@@ -12,13 +13,21 @@ export  const Bitcoin = () =>{
 
     const [bitcoin, setBitcoin] = useState([]);
 
-    const timer = 3500; 
+    const timer = 5000; 
 
     const [iteration, setIteration] = useState(0);
 
-    const [active, setActive] = useState('red')
+    const [usd_active, setUSD_Active] = useState('red')
+    
+    const [gbp_active, setGBP_Active] = useState('red')
+    
+    const [eur_active, setEUR_Active] = useState('red')
 
-    let usdPreviousValue = useRef()
+    let usdPreviousValue = useRef();
+    
+    let gbpPreviousValue = useRef();
+    
+    let eurPreviousValue = useRef();
 
     bitcoin.forEach(elem => {
         if(elem.code === "USD"){
@@ -79,6 +88,8 @@ export  const Bitcoin = () =>{
                         }
                     }
                     usdPreviousValue.current = usd.rate;
+                    gbpPreviousValue.current = gbp.rate;
+                    eurPreviousValue.current = eur.rate;
                     setBitcoin(array)
                     
                 })
@@ -87,37 +98,54 @@ export  const Bitcoin = () =>{
         },[iteration],
     )
 
-    if(+usd.rate > +usdPreviousValue.current && active !== "green"){
-       setActive("green")
+    if(usd.rate > usdPreviousValue.current && usd_active !== "green"){
+        setUSD_Active("green")
     }
-    if(+usdPreviousValue.current > +usd.rate && active !== "red"){
-        setActive("red")
+    if(usdPreviousValue.current > usd.rate && usd_active !== "red"){
+        setUSD_Active("red")
     }
 
+    if(gbp.rate > gbpPreviousValue.current && gbp_active !== "green"){
+        setGBP_Active("green")
+    }
+    if(gbpPreviousValue.current > gbp.rate && gbp_active !== "red"){
+        setGBP_Active("red")
+    }
+    
+    if(eur.rate > eurPreviousValue.current && eur_active !== "green"){
+        setEUR_Active("green")
+    }
+    if(eurPreviousValue.current > eur.rate && eur_active !== "red"){
+        setEUR_Active("red")
+    }
+
+    console.log(Math.round(usd.rate))
     
     
     return (
-
+        <Fragment>
         <div className = {"bitcoinInfo"}>
+            
             <div>
                     <div dangerouslySetInnerHTML={{__html:usd.symbol}} style = {{color:"gold"}}/>
                     <div>{usd.code}</div>
                     <div>{usd.description}</div>
-                    <div className = {active}>{usd.rate}</div>
+                    <div className = {usd_active}>{usd.rate}</div>
             </div>
             <div>
                     <div dangerouslySetInnerHTML={{__html:gbp.symbol}} style = {{color:"gold"}}/>
                     <div>{gbp.code}</div>
                     <div>{gbp.description}</div>
-                    <div>{gbp.rate}</div>
+                    <div className = {gbp_active}>{gbp.rate}</div>
             </div>
             <div>
                     <div dangerouslySetInnerHTML={{__html:eur.symbol}} style = {{color:"gold"}}/>
                     <div>{eur.code}</div>
                     <div>{eur.description}</div>
-                    <div>{eur.rate}</div>
+                    <div className = {eur_active}>{eur.rate}</div>
             </div>
+            
         </div>
-    
+        </Fragment>
     )
 }

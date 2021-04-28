@@ -5,6 +5,8 @@ import {PopularCurrencies} from "./PopularCurrencies";
 import {Graph} from "./Graph";
 import {Bitcoin} from './BitcoinInfo'
 import BY_flag from '../img/by.png';
+import {BitcoinGraph} from './BitcoinGraph';
+
 
 export const Main = () =>{
 
@@ -70,9 +72,8 @@ return(
     <div>
         <div className = "main-info">
             <div>Bitcoin Rate</div>
-
-            <Bitcoin/>
-            
+                <Bitcoin/>
+                <BitcoinGraph/>
             <div className  = {"main-info__current-currency"}>
                 <h1>current currency  {currentCountry} {currencyName} {currencyDefault}</h1>
                 <img src = {flag}/>
@@ -87,6 +88,7 @@ return(
         <div>
             <Graph usd = {usd} eur = {eur} gbp = {gbp} aud = {aud} cad = {cad} chf = {chf}/>
         </div>
+        
 
     </div>
 );
