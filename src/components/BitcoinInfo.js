@@ -25,7 +25,7 @@ export  const Bitcoin = () =>{
             for(let i in elem){
                 usd.code = elem.code;
                 usd.symbol = elem.symbol;
-                usd.rate = elem.rate.replaceAll(',','');
+                usd.rate = elem.rate_float
                 usd.description = elem.description;
             }
         }
@@ -33,7 +33,7 @@ export  const Bitcoin = () =>{
             for(let i in elem){
                 gbp.code = elem.code;
                 gbp.symbol = elem.symbol;
-                gbp.rate = elem.rate.replaceAll(',','');
+                gbp.rate = elem.rate_float;
                 gbp.description = elem.description;
             }
         }
@@ -41,7 +41,7 @@ export  const Bitcoin = () =>{
             for(let i in elem){
                 eur.code = elem.code;
                 eur.symbol = elem.symbol;
-                eur.rate = elem.rate.replaceAll(',','');
+                eur.rate = elem.rate_float
                 eur.description = elem.description;
             }
         }
