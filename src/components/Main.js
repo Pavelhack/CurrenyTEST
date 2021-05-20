@@ -14,7 +14,11 @@ export const Main = () =>{
 
     const [currentCountry, setCurrentCountry] = useState("Belarus");
 
-    const [currencyName, setCurrencyName] = useState("New Belarusian ruble")
+    const [currencyName, setCurrencyName] = useState("New Belarusian ruble");
+
+    const [bitcoin, setBitcoin] = useState([]);
+
+    const [bitcoinRateUSD, setBitcoinRateUSD] = useState(40000);
 
     const [usd, setUSD] = useState(null);
 
@@ -28,7 +32,7 @@ export const Main = () =>{
 
     const [chf, setCHF] = useState(null);
 
-    const [flag, setFlag] = useState(BY_flag)
+    const [flag, setFlag] = useState(BY_flag);
 
     useEffect(
         () => {
@@ -67,13 +71,12 @@ export const Main = () =>{
         },[currencyDefault]
     )
 
-
 return(
     <div>
         <div className = "main-info">
             <div>Bitcoin Rate</div>
-                <Bitcoin/>
-                <BitcoinGraph/>
+                <Bitcoin bitcoin = {bitcoin} setBitcoin = {setBitcoin} setBitcoinRateUSD = {setBitcoinRateUSD}/>
+                <BitcoinGraph bitcoin = {bitcoin} setBitcoin = {setBitcoin} bitcoinRateUSD = {bitcoinRateUSD} />
             <div className  = {"main-info__current-currency"}>
                 <h1>current currency  {currentCountry} {currencyName} {currencyDefault}</h1>
                 <img src = {flag}/>

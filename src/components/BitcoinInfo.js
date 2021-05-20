@@ -2,7 +2,7 @@ import React,{useEffect, useState, useRef, Fragment} from 'react';
 import {Requests} from "./Requests";
 
 
-export  const Bitcoin = () =>{
+export  const Bitcoin = ({bitcoin, setBitcoin, setBitcoinRateUSD}) =>{
     const array = [];
 
     const usd = {};
@@ -11,7 +11,7 @@ export  const Bitcoin = () =>{
 
     const eur = {};
 
-    const [bitcoin, setBitcoin] = useState([]);
+    //const [bitcoin, setBitcoin] = useState([]);
 
     const timer = 5000; 
 
@@ -23,11 +23,13 @@ export  const Bitcoin = () =>{
     
     const [eur_active, setEUR_Active] = useState('red')
 
-    let usdPreviousValue = useRef();
+    let usdPreviousValue = useRef(0);
     
-    let gbpPreviousValue = useRef();
+    let gbpPreviousValue = useRef(0);
     
-    let eurPreviousValue = useRef();
+    let eurPreviousValue = useRef(0);
+
+    let variable = 0;
 
     bitcoin.forEach(elem => {
         if(elem.code === "USD"){
@@ -83,15 +85,23 @@ export  const Bitcoin = () =>{
                     for(let i in data){
                         if(i === "bpi"){
                             for(let e in data[i]){
+                                    if(data[i][e].code === "USD"){
+                                        for(let elem in data[i][e]){
+                                            variable = data[i][e].rate_float
+                                            setBitcoinRateUSD(data[i][e].rate_float)
+                                        }
+                                    }
                                 array.push(data[i][e])
                             }
                         }
                     }
-                    usdPreviousValue.current = usd.rate;
-                    gbpPreviousValue.current = gbp.rate;
-                    eurPreviousValue.current = eur.rate;
-                    setBitcoin(array)
-                    
+                    if(usdPreviousValue.current !== variable){
+                        usdPreviousValue.current = usd.rate;
+                        gbpPreviousValue.current = gbp.rate;
+                        eurPreviousValue.current = eur.rate;
+                        console.log(variable + " set " + usd.rate);
+                        setBitcoin(array);
+                    }
                 })
                 setIteration(prev=>prev+1)
             },timer)
@@ -119,9 +129,6 @@ export  const Bitcoin = () =>{
         setEUR_Active("red")
     }
 
-    console.log(Math.round(usd.rate))
-    
-    
     return (
         <Fragment>
         <div className = {"bitcoinInfo"}>
