@@ -18,7 +18,9 @@ export const Main = () =>{
 
     const [bitcoin, setBitcoin] = useState([]);
 
-    const [bitcoinRateUSD, setBitcoinRateUSD] = useState(40000);
+    const [bitcoinRateUSD, setBitcoinRateUSD] = useState(0);
+
+    const [bitcoinFirstRate, setBitcoinFirstRate] = useState(0);
 
     const [usd, setUSD] = useState(null);
 
@@ -75,8 +77,8 @@ return(
     <div>
         <div className = "main-info">
             <div>Bitcoin Rate</div>
-                <Bitcoin bitcoin = {bitcoin} setBitcoin = {setBitcoin} setBitcoinRateUSD = {setBitcoinRateUSD}/>
-                <BitcoinGraph bitcoin = {bitcoin} setBitcoin = {setBitcoin} bitcoinRateUSD = {bitcoinRateUSD} />
+                <Bitcoin bitcoin = {bitcoin} setBitcoin = {setBitcoin} setBitcoinRateUSD = {setBitcoinRateUSD} setBitcoinFirstRate = {setBitcoinFirstRate}/>
+                <BitcoinGraph bitcoin = {bitcoin} setBitcoin = {setBitcoin} bitcoinRateUSD = {bitcoinRateUSD} bitcoinFirstRate = {bitcoinFirstRate}/>
             <div className  = {"main-info__current-currency"}>
                 <h1>current currency  {currentCountry} {currencyName} {currencyDefault}</h1>
                 <img src = {flag}/>

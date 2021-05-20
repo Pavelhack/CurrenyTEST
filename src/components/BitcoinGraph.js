@@ -3,30 +3,28 @@ import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import './BitcoinGraph.css';
 
-export const BitcoinGraph = ({bitcoinRateUSD, bitcoin }) =>{
+export const BitcoinGraph = ({bitcoinRateUSD, bitcoin, bitcoinFirstRate }) =>{
 
     const [series, setSeries] = useState([]);
 
     useEffect(
-        () =>{
-
-            let data = [],
-            time = (new Date()).getTime(),
-            i;
-            
-                for (i = -9; i <= 0; i += 1) {
-                    data.push({
-                        x: time + i * 10000,
-                        y: Math.random()*(bitcoinRateUSD - bitcoinRateUSD- 100)+bitcoinRateUSD * 100/100
-                    });
-                }
-            setSeries(data);
-        },[]
-    
+            () =>{
+                    let data = [],
+                    time = (new Date()).getTime(),
+                    i;
+                    
+                        for (i = -9; i <= 0; i += 1) {
+                            data.push({
+                                x: time + i * 10000,
+                                y: Math.random()*(bitcoinFirstRate - (bitcoinFirstRate-100)) + bitcoinFirstRate * 100/100
+                            });
+                        }
+                    setSeries(data);
+            },[bitcoinFirstRate]
     )
 
     useEffect(
-        function newBitcoinData (){
+        () =>{
                     // set up the updating of the chart each second
                         let x = (new Date()).getTime(), // current time
                             y = bitcoinRateUSD;

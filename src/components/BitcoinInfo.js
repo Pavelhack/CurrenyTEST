@@ -2,7 +2,7 @@ import React,{useEffect, useState, useRef, Fragment} from 'react';
 import {Requests} from "./Requests";
 
 
-export  const Bitcoin = ({bitcoin, setBitcoin, setBitcoinRateUSD}) =>{
+export  const Bitcoin = ({bitcoin, setBitcoin, setBitcoinFirstRate, setBitcoinRateUSD}) =>{
     const array = [];
 
     const usd = {};
@@ -30,6 +30,7 @@ export  const Bitcoin = ({bitcoin, setBitcoin, setBitcoinRateUSD}) =>{
     let eurPreviousValue = useRef(0);
 
     let variable = 0;
+
 
     bitcoin.forEach(elem => {
         if(elem.code === "USD"){
@@ -68,11 +69,14 @@ export  const Bitcoin = ({bitcoin, setBitcoin, setBitcoinRateUSD}) =>{
                 for(let i in data){
                     if(i === "bpi"){
                         for(let e in data[i]){
-                            array.push(data[i][e])
+                            if(data[i][e].code === "USD"){
+                                for(let elem in data[i][e]){
+                                    setBitcoinFirstRate(data[i][e].rate_float)
+                                }
+                            }
                         }
                     }
                 }
-                setBitcoin(array)
             })
         },[]
     )
@@ -99,7 +103,6 @@ export  const Bitcoin = ({bitcoin, setBitcoin, setBitcoinRateUSD}) =>{
                         usdPreviousValue.current = usd.rate;
                         gbpPreviousValue.current = gbp.rate;
                         eurPreviousValue.current = eur.rate;
-                        console.log(variable + " set " + usd.rate);
                         setBitcoin(array);
                     }
                 })
