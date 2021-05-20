@@ -29,37 +29,36 @@ export  const Bitcoin = ({bitcoin, setBitcoin, setBitcoinFirstRate, setBitcoinRa
     
     let eurPreviousValue = useRef(0);
 
-    let variable = 0;
+    let previousVariable = useRef(0);
 
+    let variable = useRef(0);
 
-    bitcoin.forEach(elem => {
-        if(elem.code === "USD"){
-            for(let i in elem){
-                usd.code = elem.code;
-                usd.symbol = elem.symbol;
-                usd.rate = elem.rate_float
-                usd.description = elem.description;
+        bitcoin.forEach(elem => {
+            if(elem.code === "USD"){
+                for(let i in elem){
+                    usd.code = elem.code;
+                    usd.symbol = elem.symbol;
+                    usd.rate = elem.rate_float
+                    usd.description = elem.description;
+                }
             }
-        }
-        if(elem.code === "GBP"){
-            for(let i in elem){
-                gbp.code = elem.code;
-                gbp.symbol = elem.symbol;
-                gbp.rate = elem.rate_float;
-                gbp.description = elem.description;
+            if(elem.code === "GBP"){
+                for(let i in elem){
+                    gbp.code = elem.code;
+                    gbp.symbol = elem.symbol;
+                    gbp.rate = elem.rate_float;
+                    gbp.description = elem.description;
+                }
             }
-        }
-        if(elem.code === "EUR"){
-            for(let i in elem){
-                eur.code = elem.code;
-                eur.symbol = elem.symbol;
-                eur.rate = elem.rate_float
-                eur.description = elem.description;
+            if(elem.code === "EUR"){
+                for(let i in elem){
+                    eur.code = elem.code;
+                    eur.symbol = elem.symbol;
+                    eur.rate = elem.rate_float
+                    eur.description = elem.description;
+                }
             }
-        }
-        
-    })
-
+        })
 
     useEffect(
         
@@ -91,15 +90,19 @@ export  const Bitcoin = ({bitcoin, setBitcoin, setBitcoinFirstRate, setBitcoinRa
                             for(let e in data[i]){
                                     if(data[i][e].code === "USD"){
                                         for(let elem in data[i][e]){
-                                            variable = data[i][e].rate_float
-                                            setBitcoinRateUSD(data[i][e].rate_float)
+                                            if(data[i][e].rate_float !== previousVariable.current){
+                                                setBitcoinRateUSD(data[i][e].rate_float)
+                                                variable.current = data[i][e].rate_float
+                                            }
                                         }
                                     }
                                 array.push(data[i][e])
                             }
                         }
                     }
-                    if(usdPreviousValue.current !== variable){
+
+                    if(previousVariable.current !== variable.current){
+                        previousVariable.current = variable.current;
                         usdPreviousValue.current = usd.rate;
                         gbpPreviousValue.current = gbp.rate;
                         eurPreviousValue.current = eur.rate;
