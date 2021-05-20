@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/CurrenyTEST/static/css/main.f753e9be.chunk.css",
-    "main.js": "/CurrenyTEST/static/js/main.b0983a98.chunk.js",
-    "main.js.map": "/CurrenyTEST/static/js/main.b0983a98.chunk.js.map",
+    "main.js": "/CurrenyTEST/static/js/main.bff391e4.chunk.js",
+    "main.js.map": "/CurrenyTEST/static/js/main.bff391e4.chunk.js.map",
     "runtime-main.js": "/CurrenyTEST/static/js/runtime-main.8b34cafe.js",
     "runtime-main.js.map": "/CurrenyTEST/static/js/runtime-main.8b34cafe.js.map",
     "static/css/2.a5497ee8.chunk.css": "/CurrenyTEST/static/css/2.a5497ee8.chunk.css",
-    "static/js/2.7788ea7a.chunk.js": "/CurrenyTEST/static/js/2.7788ea7a.chunk.js",
-    "static/js/2.7788ea7a.chunk.js.map": "/CurrenyTEST/static/js/2.7788ea7a.chunk.js.map",
+    "static/js/2.fe94f154.chunk.js": "/CurrenyTEST/static/js/2.fe94f154.chunk.js",
+    "static/js/2.fe94f154.chunk.js.map": "/CurrenyTEST/static/js/2.fe94f154.chunk.js.map",
     "static/js/3.ac095a2d.chunk.js": "/CurrenyTEST/static/js/3.ac095a2d.chunk.js",
     "static/js/3.ac095a2d.chunk.js.map": "/CurrenyTEST/static/js/3.ac095a2d.chunk.js.map",
     "static/js/4.a8d627f0.chunk.js": "/CurrenyTEST/static/js/4.a8d627f0.chunk.js",
@@ -507,13 +507,13 @@
     "index.html": "/CurrenyTEST/index.html",
     "static/css/2.a5497ee8.chunk.css.map": "/CurrenyTEST/static/css/2.a5497ee8.chunk.css.map",
     "static/css/main.f753e9be.chunk.css.map": "/CurrenyTEST/static/css/main.f753e9be.chunk.css.map",
-    "static/js/2.7788ea7a.chunk.js.LICENSE.txt": "/CurrenyTEST/static/js/2.7788ea7a.chunk.js.LICENSE.txt"
+    "static/js/2.fe94f154.chunk.js.LICENSE.txt": "/CurrenyTEST/static/js/2.fe94f154.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.8b34cafe.js",
     "static/css/2.a5497ee8.chunk.css",
-    "static/js/2.7788ea7a.chunk.js",
+    "static/js/2.fe94f154.chunk.js",
     "static/css/main.f753e9be.chunk.css",
-    "static/js/main.b0983a98.chunk.js"
+    "static/js/main.bff391e4.chunk.js"
   ]
 }
