@@ -1,0 +1,30 @@
+.container{
+    margin: 0;
+}
+
+.top {
+    margin: 0px;
+    background-image: url(../img-app/Main-bg.svg);
+    height: 100vh;
+}
+
+.top_content {
+    max-width: 1200px;
+    margin: 0px auto;
+}
+
+.top_content_greeting_graph {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.top_content_greeting {
+    display: flex;
+}
+
+.top_content_graph {
+    display: flex;
+
+}

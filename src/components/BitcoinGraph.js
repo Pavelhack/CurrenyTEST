@@ -15,7 +15,7 @@ export const BitcoinGraph = ({bitcoinRateUSD, bitcoin, bitcoinFirstRate }) =>{
                     
                         for (i = -9; i <= 0; i += 1) {
                             data.push({
-                                x: time + i * 10000,
+                                x: time + i * 30000,
                                 y: Math.random()*(bitcoinFirstRate - (bitcoinFirstRate-100)) + bitcoinFirstRate * 100/100
                             });
                         }

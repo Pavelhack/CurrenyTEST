@@ -6,9 +6,19 @@ import {Graph} from "./Graph";
 import {Bitcoin} from './BitcoinInfo'
 import BY_flag from '../img/by.png';
 import {BitcoinGraph} from './BitcoinGraph';
+import classes from './Main.module.css';
+import graph from '../img-app/top-graph.svg'
 
 
 export const Main = () =>{
+
+    const CLASSES = {
+        TOP: classes.top,
+        TOP_CONTENT: classes.top_content,
+        TOP_CONTENT_GREETING_GRAPH: classes.top_content_greeting_graph,
+        TOP_CONTENT_GREETING: classes.top_content_greeting,
+        TOP_CONTENT_GRAPH: classes.top_content_graph
+    }
 
     const [currencyDefault, setCurrencyDefault] = useState("BYN");
 
@@ -74,7 +84,19 @@ export const Main = () =>{
     )
 
 return(
-    <div>
+    <div className = "container">
+        <div className  = {CLASSES.TOP}>
+            <div className = {CLASSES.TOP_CONTENT}>
+                <div className = {CLASSES.TOP_CONTENT_GREETING_GRAPH}>
+                    <div className = {CLASSES.TOP_CONTENT_GREETING}>
+                        <h1>Hey!<br/> I want to help you keep track<br/>of the current exchange rate</h1>
+                    </div>
+                    <div className = {CLASSES.TOP_CONTENT_GRAPH}>
+                        <img src = {graph}/>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div className = "main-info">
             <div>Bitcoin Rate</div>
                 <Bitcoin bitcoin = {bitcoin} setBitcoin = {setBitcoin} setBitcoinRateUSD = {setBitcoinRateUSD} setBitcoinFirstRate = {setBitcoinFirstRate}/>
@@ -93,8 +115,6 @@ return(
         <div>
             <Graph usd = {usd} eur = {eur} gbp = {gbp} aud = {aud} cad = {cad} chf = {chf}/>
         </div>
-        
-
     </div>
 );
 }
