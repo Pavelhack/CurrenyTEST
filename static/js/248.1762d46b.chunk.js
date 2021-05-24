@@ -1,0 +1,2 @@
+(this["webpackJsonpcurency-exchange"]=this["webpackJsonpcurency-exchange"]||[]).push([[248],{457:function(A,g,e){"use strict";e.r(g),g.default="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAUCAMAAACtdX32AAAAS1BMVEX///9AT6bf7uj/uBwAFInobmUPfUzgPDEAd0kAAAA/mXY/hz2Pmy+QxK9QOgjwrRr38vUQDAHfsCGwfhP1wb6wttriSD1QXa4QIpDY/GknAAAAb0lEQVQoz52QSw6AIAwFqwK2/n+o9z+pQoihBLpwtpM3gQIimhGOs80C6OjqRed1730pAM1ghABM8yYEgNZdCAARsYBmOM0CwCHPF0gIOgr80GJcflr8MVsxkrNcisOOam+VamHqtDB1WpgGXZq+PO5iESB8SBEzAAAAAElFTkSuQmCC"}}]);
+//# sourceMappingURL=248.1762d46b.chunk.js.map
