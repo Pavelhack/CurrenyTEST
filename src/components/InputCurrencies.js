@@ -2,8 +2,17 @@ import React, {useState, useEffect} from 'react';
 import {Select} from "antd";
 import {Requests} from "./Requests";
 import DB from './CountryObject.json';
+import classes from "./InputCurrencies.module.css";
+import ant from 'antd/dist/antd.css';
 
-const {Option} = Select;
+
+
+const CLASSES = {
+    INPUT: classes.input,
+    ANT_SELECT_SELECTOR: classes.input,
+}
+
+
 const FlagArray = [];
 
 class Flag{
@@ -21,11 +30,13 @@ for (let i in DB) {
         })
 }
 
-export const InputValue = ({setCurrency, setCurrentCountry, setCurrencyName, setFlag}) => {
+
+
+export const InputCurrencies = ({setCurrency, setCurrentCountry, setCurrencyName, setFlag}) => {
 
     const [currencies, setCurrencies] = useState([]);
 
-    const [inputValue, setValue] = useState('currency');
+    const [inputValue, setValue] = useState('BYN');
 
 
     function onChange(value, object) {
@@ -47,46 +58,17 @@ export const InputValue = ({setCurrency, setCurrentCountry, setCurrencyName, set
     useEffect(
         () => {
             const req = new Requests()
-
-            // let array = [];
-            // req.GetCurrenciesAPI().then((data)=>{
-            //
-            //     for (let i in data.results) {
-            //         array.push(i)
-            //     }
-            //
-            //     // sort of array
-            //     array.sort();
-            //
-            //     const PopularCurrencies = ["USD","EUR","RUB","BYN","GBP"];
-            //
-            //     // delete popular currencies from array
-            //     PopularCurrencies.forEach((element) =>{
-            //         array = array.filter(item => item !== element)
-            //     })
-            //
-            //     // add popular currencies into start
-            //     array.unshift(...PopularCurrencies)
-            //
-            //     array = array.map((item) => <Option key={item}>{item}</Option> )
-            //
-            //     setCurrencies(array)
-            // })
-
             setCurrencies(req.GEtCurrenciesJson())
-
+            console.log(ant.anticon)
 
         }, []
     )
+
     return (
-        <Select
+        <Select 
+            // style = {{height: "51px", width: "191px", border: "1px solid #5A5B75", borderRadius: "8px"}}
             showSearch
             value={inputValue}
-            style={{
-                width: "120px",
-                margin: '0 8px',
-
-            }}
             placeholder="Select a currency"
             optionFilterProp="children"
             onChange={onChange}

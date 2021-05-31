@@ -1,9 +1,20 @@
 @import '~antd/dist/antd.css';
 
+.ant-select-selector {
+  border: none;
+  border-radius: none;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
+* {
+  font-family: Releway, sans-serif;
+}
 
-
+.block_1136 {
+  width: 1136px;
+  margin: 0px auto;
+}
 
 /* blog previews / list */
 .blog-preview {
@@ -34,9 +45,7 @@
   flex-direction: column;
 }
 
-.main-info__current-currency {
-  margin-top: 40px;
-}
+
 
 .bitcoinInfo {
   display: flex;
@@ -51,25 +60,5 @@
   background-color: red;
 }
 
-.table {
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: auto auto auto auto auto;
-  margin-top: 40px;
-  width: 600px;
-  height: 200px;
-  border: 2px solid black;
-}
 
-  .table_column {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    border-right: 1px solid #f1356d;
-  }
-
-    .rows {
-      height: 100%;
-      border-bottom: 1px solid #f1356d;
-    }
 

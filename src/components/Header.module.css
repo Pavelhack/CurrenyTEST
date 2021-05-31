@@ -14,10 +14,8 @@
 
 .header__navbar {
     display: flex;  
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 18px;
-    justify-content: space-evenly;
+    padding: 18px 0px;
+    justify-content: space-between;
     align-items: center;
 }
 

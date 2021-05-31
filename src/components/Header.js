@@ -15,30 +15,32 @@ export const Header = () =>{
   }
   return(
     <div className = {CLASSES.HEADER}>
-      <nav className = {CLASSES.HEADER__NAVBAR}>
+      <div className = "block_1136">
+        <nav className = {CLASSES.HEADER__NAVBAR}>
 
-        <div className = {CLASSES.HEADER__LOGO}>
-          <img src = {Logo}/>
-        </div>
+          <div className = {CLASSES.HEADER__LOGO}>
+            <img src = {Logo}/>
+          </div>
 
-        <div className = {CLASSES.HEADER__NAVIGATION}>
-            <div>
-              <a href="#Exchange_rate">Exchange rate</a>
-            </div>
-            <div id = "">
-              <a href="#Bitcoin_rate">Bitcoin rate</a>
-            </div>
-            <div>
-             <a href="#Our_contacts">Our_contacts</a>
-            </div>
-        </div>
+          <div className = {CLASSES.HEADER__NAVIGATION}>
+              <div>
+                <a href="#Exchange_rate">Exchange rate</a>
+              </div>
+              <div id = "">
+                <a href="#Bitcoin_rate">Bitcoin rate</a>
+              </div>
+              <div>
+              <a href="#Our_contacts">Our_contacts</a>
+              </div>
+          </div>
 
-        <div className = "links">
-            <NavLink className = {CLASSES.HEADER__LINK_MAIN} to="/" exact>Main</NavLink>
-            <NavLink className = {CLASSES.HEADER__LINK_CONVERTER} to="/InfoRate">Currency converter</NavLink>
-        </div>
-
-      </nav>
+          <div className = "links">
+              <NavLink className = {CLASSES.HEADER__LINK_MAIN} to="/" exact>Main</NavLink>
+              <NavLink className = {CLASSES.HEADER__LINK_CONVERTER} to="/InfoRate">Currency converter</NavLink>
+          </div>
+          
+        </nav>
+      </div>
     </div>
   );
 }

@@ -1,8 +1,7 @@
 @import 'https://code.highcharts.com/css/highcharts.css';
 
-.graph {
-    margin-top: 40px;
-    width: 600px;
+.graph { 
+    width: 100%;
 }
 
 /**

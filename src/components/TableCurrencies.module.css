@@ -1,0 +1,50 @@
+.current_currency_table_fontOfcurrency {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  }
+
+.current_currency_table {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: auto auto auto auto auto;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.current_currency_table_header {
+  display: flex;
+  align-items: center;
+  background-color: #6A62EB;
+}
+  
+.current_currency_table_column {
+  display: flex;
+  flex-direction: column;
+}
+
+.current_currency_table_rows {
+  display: flex;
+}
+
+.current_currency_table_rows_inside {
+  display: flex;
+  margin: 0px auto;
+  height: 59px;
+  align-items: center;
+}
+
+.current_currency_flag_img {
+  display: flex;
+  width: 25px;
+  height: 25px;
+  border-radius: 50px;
+}
+
+.odd {
+  background-color: rgba(240, 239, 255, 0.5);
+}
+
+.even {
+  background-color: #F0EFFF;
+}

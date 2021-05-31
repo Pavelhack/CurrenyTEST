@@ -1,0 +1,19 @@
+@import '~antd/dist/antd.css';
+
+.input {
+    width: 193px;
+    height: 51px;
+    border: 1px solid #5A5B75;
+    border-radius: 8px;
+}
+
+.div {
+    color : red;
+}
+
+.ant-select:not(.ant-select-disabled):hover 
+.ant-select-selector {
+    border-color: red;
+    border-right-width: 2px !important;
+}
+

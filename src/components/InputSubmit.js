@@ -153,6 +153,7 @@ export const Demo = ({setResult}) => {
                 },
             }}
         >
+
             <Form.Item
                 name="price"
                 label="Price"
@@ -162,13 +163,19 @@ export const Demo = ({setResult}) => {
                     },
                 ]}
             >
+
                 <PriceInput/>
+
             </Form.Item>
+            
             <Form.Item>
+
                 <Button type="primary" htmlType="submit">
                     Submit
                 </Button>
+
             </Form.Item>
+
         </Form>
     );
 };
