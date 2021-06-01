@@ -7,13 +7,6 @@
     border-radius: 8px;
 }
 
-.div {
-    color : red;
-}
 
-.ant-select:not(.ant-select-disabled):hover 
-.ant-select-selector {
-    border-color: red;
-    border-right-width: 2px !important;
-}
+
 

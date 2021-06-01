@@ -1,8 +1,16 @@
 import React,{useEffect, useState, useRef, Fragment} from 'react';
 import {Requests} from "./Requests";
+import classes from "./BitcoinInfo.module.css"
 
-
-export  const Bitcoin = ({bitcoin, setBitcoin, setBitcoinFirstRate, setBitcoinRateUSD}) =>{
+export  const BitcoinInfo = ({bitcoin, setBitcoin, setBitcoinFirstRate, setBitcoinRateUSD}) =>{
+    
+    const CLASSES = {
+        BITCOININFO: classes.bitcoinInfo,
+        RED: classes.red,
+        GREEN: classes.green,
+        BITCOININFO_BOX: classes.bitcoinInfo_box
+    } 
+    
     const array = [];
 
     const usd = {};
@@ -17,11 +25,11 @@ export  const Bitcoin = ({bitcoin, setBitcoin, setBitcoinFirstRate, setBitcoinRa
 
     const [iteration, setIteration] = useState(0);
 
-    const [usd_active, setUSD_Active] = useState('red')
+    const [usd_active, setUSD_Active] = useState(`${CLASSES.RED}`)
     
-    const [gbp_active, setGBP_Active] = useState('red')
+    const [gbp_active, setGBP_Active] = useState(`${CLASSES.RED}`)
     
-    const [eur_active, setEUR_Active] = useState('red')
+    const [eur_active, setEUR_Active] = useState(`${CLASSES.RED}`)
 
     let usdPreviousValue = useRef(0);
     
@@ -114,51 +122,56 @@ export  const Bitcoin = ({bitcoin, setBitcoin, setBitcoinFirstRate, setBitcoinRa
         },[iteration],
     )
 
-    if(usd.rate > usdPreviousValue.current && usd_active !== "green"){
-        setUSD_Active("green")
+    if(usd.rate > usdPreviousValue.current && usd_active !== `${CLASSES.GREEN}`){
+        setUSD_Active(`${CLASSES.GREEN}`)
     }
-    if(usdPreviousValue.current > usd.rate && usd_active !== "red"){
-        setUSD_Active("red")
+    if(usdPreviousValue.current > usd.rate && usd_active !== `${CLASSES.RED}`){
+        setUSD_Active(`${CLASSES.RED}`)
     }
 
-    if(gbp.rate > gbpPreviousValue.current && gbp_active !== "green"){
-        setGBP_Active("green")
+    if(gbp.rate > gbpPreviousValue.current && gbp_active !== `${CLASSES.GREEN}`){
+        setGBP_Active(`${CLASSES.GREEN}`)
     }
-    if(gbpPreviousValue.current > gbp.rate && gbp_active !== "red"){
-        setGBP_Active("red")
+    if(gbpPreviousValue.current > gbp.rate && gbp_active !== `${CLASSES.RED}`){
+        setGBP_Active(`${CLASSES.RED}`)
     }
     
-    if(eur.rate > eurPreviousValue.current && eur_active !== "green"){
-        setEUR_Active("green")
+    if(eur.rate > eurPreviousValue.current && eur_active !== `${CLASSES.GREEN}`){
+        setEUR_Active(`${CLASSES.GREEN}`)
     }
-    if(eurPreviousValue.current > eur.rate && eur_active !== "red"){
-        setEUR_Active("red")
+    if(eurPreviousValue.current > eur.rate && eur_active !== `${CLASSES.RED}`){
+        setEUR_Active(`${CLASSES.RED}`)
     }
+
+
+    
 
     return (
         <Fragment>
-        <div className = {"bitcoinInfo"}>
-            
-            <div>
-                    <div dangerouslySetInnerHTML={{__html:usd.symbol}} style = {{color:"gold"}}/>
-                    <div>{usd.code}</div>
-                    <div>{usd.description}</div>
-                    <div className = {usd_active}>{usd.rate}</div>
+            <div className = {CLASSES.BITCOININFO}>
+                
+                <div className = {CLASSES.BITCOININFO_BOX}>
+                    <div style = {{display: "flex", flexDirection: "column"}}>
+                        <div dangerouslySetInnerHTML={{__html:usd.symbol}} style = {{color:"gold", margin: "12px 0"}}/>
+                        <div style = {{margin: "12px 0"}}>{usd.code}</div>
+                        <div style = {{margin: "12px 0"}}>{usd.description}</div>
+                        <div className = {usd_active} style = {{margin: "12px 0"}}>{usd.rate}</div>
+                    </div>
+                </div>
+                <div className = {CLASSES.BITCOININFO_BOX}>
+                        <div dangerouslySetInnerHTML={{__html:gbp.symbol}} style = {{color:"gold"}}/>
+                        <div>{gbp.code}</div>
+                        <div>{gbp.description}</div>
+                        <div className = {gbp_active}>{gbp.rate}</div>
+                </div>
+                <div className = {CLASSES.BITCOININFO_BOX}>
+                        <div dangerouslySetInnerHTML={{__html:eur.symbol}} style = {{color:"gold"}}/>
+                        <div>{eur.code}</div>
+                        <div>{eur.description}</div>
+                        <div className = {eur_active}>{eur.rate}</div>
+                </div>
+                
             </div>
-            <div>
-                    <div dangerouslySetInnerHTML={{__html:gbp.symbol}} style = {{color:"gold"}}/>
-                    <div>{gbp.code}</div>
-                    <div>{gbp.description}</div>
-                    <div className = {gbp_active}>{gbp.rate}</div>
-            </div>
-            <div>
-                    <div dangerouslySetInnerHTML={{__html:eur.symbol}} style = {{color:"gold"}}/>
-                    <div>{eur.code}</div>
-                    <div>{eur.description}</div>
-                    <div className = {eur_active}>{eur.rate}</div>
-            </div>
-            
-        </div>
         </Fragment>
     )
 }

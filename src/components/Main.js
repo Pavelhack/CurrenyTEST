@@ -4,7 +4,7 @@ import {InputCurrencies} from './InputCurrencies'
 import {Requests} from "./Requests";
 import {PopularCurrencies} from "./TableCurrencies";
 import {Graph} from "./Graph";
-import {Bitcoin} from './BitcoinInfo'
+import {BitcoinInfo} from './BitcoinInfo'
 import BY_flag from '../img/by.png';
 import {BitcoinGraph} from './BitcoinGraph';
 import classes from './Main.module.css';
@@ -32,7 +32,12 @@ export const Main = () =>{
         CURRENT_CURRENCY_TABLE_TABLE: classes.current_currency_table,
         CURRENT_CURRENCY_TABLE_COLUMN: classes.current_currency_table_column,
         CURRENT_CURRENCY_TABLE_ROWS: classes.current_currency_table_rows,
-        CURRENT_CURRENCY_GRAPH: classes.current_currency_graph
+        CURRENT_CURRENCY_GRAPH: classes.current_currency_graph,
+        BITCOIN: classes.bitcoin,
+        BITCOIN_INFO: classes.bitcoin_info,
+        BITCOIN_BITCOIN_GRAPH: classes.bitcoin_graph,
+        BITCOIN_CONTENT: classes.bitcoin_content,
+        BITCOIN_TITLE: classes.bitcoin_title
     }
 
     const [currencyDefault, setCurrencyDefault] = useState("BYN");
@@ -150,17 +155,26 @@ return(
                         <PopularCurrencies usd = {usd} eur = {eur} gbp = {gbp} aud = {aud} cad = {cad} chf = {chf} flag={flag}/>
                     </div>
                     <div className = {CLASSES.CURRENT_CURRENCY_GRAPH}>
-                        <Graph usd = {usd} eur = {eur} gbp = {gbp} aud = {aud} cad = {cad} chf = {chf}/>
+                        <Graph usd = {usd} eur = {eur} gbp = {gbp} aud = {aud} cad = {cad} chf = {chf} bitcoinFirstRate = {bitcoinFirstRate}/>
                     </div>
                 </div>
             </div>    
         </div>
 
-        <div className = "main-info">
-            <div>Bitcoin Rate</div>
-                <Bitcoin bitcoin = {bitcoin} setBitcoin = {setBitcoin} setBitcoinRateUSD = {setBitcoinRateUSD} setBitcoinFirstRate = {setBitcoinFirstRate}/>
-                <BitcoinGraph bitcoin = {bitcoin} setBitcoin = {setBitcoin} bitcoinRateUSD = {bitcoinRateUSD} bitcoinFirstRate = {bitcoinFirstRate}/>
-            
+        <div className = {CLASSES.BITCOIN}>
+            <div className = "block_1136">
+                <div className = {CLASSES.BITCOIN_CONTENT}>
+                    <div className = {CLASSES.BITCOIN_TITLE}>
+                        Bitcoin Rate
+                    </div>
+                    <div className = {CLASSES.BITCOIN_INFO}>
+                        <BitcoinInfo bitcoin = {bitcoin} setBitcoin = {setBitcoin} setBitcoinRateUSD = {setBitcoinRateUSD} setBitcoinFirstRate = {setBitcoinFirstRate}/>
+                    </div>
+                    <div className = {CLASSES.BITCOIN_BITCOING_RAPH}>
+                        <BitcoinGraph bitcoin = {bitcoin} setBitcoin = {setBitcoin} bitcoinRateUSD = {bitcoinRateUSD} bitcoinFirstRate = {bitcoinFirstRate}/>
+                    </div>
+                </div>
+            </div>
         </div>
         
     </div>

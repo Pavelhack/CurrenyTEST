@@ -40,25 +40,7 @@
   pointer-events: none;
 }
 
-.main-info {
-  display: flex;
-  flex-direction: column;
-}
 
-
-
-.bitcoinInfo {
-  display: flex;
-  justify-content: space-around;
-}
-
-.green {
-  background-color: green;
-}
-
-.red {
-  background-color: red;
-}
 
 
 

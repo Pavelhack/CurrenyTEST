@@ -19,7 +19,6 @@ export const PopularCurrencies = ({usd , eur, gbp, aud, cad, chf, flag}) =>{
        EVEN: classes.even
 
     }
-    console.log(CLASSES.CURRENT_CURRENCY_TABLE)
 
     return(
         <div className={CLASSES.CURRENT_CURRENCY_TABLE}>

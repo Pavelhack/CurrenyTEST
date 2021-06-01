@@ -133,6 +133,33 @@ button {
     margin-top: 20px;
 }
 
-.current_currency_graph {
+.current_currency_graph,
+.bitcoin_content {
+    width:  100%;
     margin: 64px auto;
 }
+
+.bitcoin {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(240, 239, 255, 0.5);
+}
+
+.bitcoin_title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 120%;
+    text-align: center;
+    color: #1A1A2E;
+}
+
+.bitcoin_info {
+    margin: 80px auto;
+
+}
+
+.bitcoin_graph {
+
+}
+  

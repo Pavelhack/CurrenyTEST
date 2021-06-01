@@ -1,0 +1,28 @@
+.bitcoinInfo {
+    display: flex;
+    justify-content: space-around;
+    }
+
+.bitcoinInfo_box {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    width: 368px;
+    height: 280px;
+    background: #FFFFFF;
+    border: 1px solid #E1DFFF;
+    border-radius: 8px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 120%;
+    color: #000000;    
+}
+      
+.green {
+background-color: green;
+}
+    
+.red {
+background-color: red;
+}

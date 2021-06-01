@@ -1,7 +1,7 @@
 import React, { useEffect, useState} from 'react'
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
-import './BitcoinGraph.css';
+/* import './BitcoinGraph.css'; */
 
 export const BitcoinGraph = ({bitcoinRateUSD, bitcoin, bitcoinFirstRate }) =>{
 
@@ -132,7 +132,7 @@ export const BitcoinGraph = ({bitcoinRateUSD, bitcoin, bitcoinFirstRate }) =>{
     
 
     return(
-        <div className="graph">
+        <div className="graph_bitcoin">
             <HighchartsReact highcharts={Highcharts} options={options} />
         </div>
     )

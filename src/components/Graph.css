@@ -1,6 +1,6 @@
-@import 'https://code.highcharts.com/css/highcharts.css';
+/* @import 'https://code.highcharts.com/css/highcharts.css'; */
 
-.graph { 
+.graph_currecies { 
     width: 100%;
 }
 
@@ -100,7 +100,7 @@
 }
 
 .highcharts-axis-labels {
-    fill: white;
+    fill: rgba(104, 226, 177, 1);
     cursor: default;
     font-size: 0.9em;
 }

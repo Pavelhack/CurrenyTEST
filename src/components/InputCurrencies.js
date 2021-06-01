@@ -59,14 +59,13 @@ export const InputCurrencies = ({setCurrency, setCurrentCountry, setCurrencyName
         () => {
             const req = new Requests()
             setCurrencies(req.GEtCurrenciesJson())
-            console.log(ant.anticon)
-
         }, []
     )
 
     return (
         <Select 
-            // style = {{height: "51px", width: "191px", border: "1px solid #5A5B75", borderRadius: "8px"}}
+            style = {{width: "191px"}}
+            /* className = {CLASSES.INPUT} */
             showSearch
             value={inputValue}
             placeholder="Select a currency"

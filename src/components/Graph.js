@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import './Graph.css';
 
-export const Graph = ({usd , eur, gbp, aud, cad, chf}) =>{
+export const Graph = ({usd , eur, gbp, aud, cad, chf, bitcoinFirstRate}) =>{
+
     const us = [];
     const eu = [];
     const gp = [];
@@ -23,6 +24,14 @@ export const Graph = ({usd , eur, gbp, aud, cad, chf}) =>{
     for(let i = 0; i<= ratCurrencies.length - 1; i++){
         getRandomArray(ratCurrencies[i],currencies[i]/1.1, currencies[i])
     }
+
+    useEffect(
+        () => {
+            
+        },[bitcoinFirstRate]
+    )
+
+    
 
     const options ={
         title: {
@@ -106,7 +115,8 @@ export const Graph = ({usd , eur, gbp, aud, cad, chf}) =>{
     };
 
 return(
-    <div className="graph">
+
+    <div className="graph_currecies">
         <HighchartsReact highcharts={Highcharts} options={options} />
     </div>
     )
