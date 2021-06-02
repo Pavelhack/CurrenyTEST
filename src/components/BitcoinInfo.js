@@ -8,7 +8,11 @@ export  const BitcoinInfo = ({bitcoin, setBitcoin, setBitcoinFirstRate, setBitco
         BITCOININFO: classes.bitcoinInfo,
         RED: classes.red,
         GREEN: classes.green,
-        BITCOININFO_BOX: classes.bitcoinInfo_box
+        M_12: classes.m_12,
+        BITCOININFO_BOX: classes.bitcoinInfo_box,
+        BITCOININFO_BOX_COLUMN: classes.bitcoinInfo_box_column,
+        BITCOININFO_BOX_COLUMN_SYMBOL:  classes.bitcoinInfo_box_column_symbol,
+        
     } 
     
     const array = [];
@@ -151,24 +155,28 @@ export  const BitcoinInfo = ({bitcoin, setBitcoin, setBitcoinFirstRate, setBitco
             <div className = {CLASSES.BITCOININFO}>
                 
                 <div className = {CLASSES.BITCOININFO_BOX}>
-                    <div style = {{display: "flex", flexDirection: "column"}}>
-                        <div dangerouslySetInnerHTML={{__html:usd.symbol}} style = {{color:"gold", margin: "12px 0"}}/>
-                        <div style = {{margin: "12px 0"}}>{usd.code}</div>
-                        <div style = {{margin: "12px 0"}}>{usd.description}</div>
-                        <div className = {usd_active} style = {{margin: "12px 0"}}>{usd.rate}</div>
+                    <div className = {CLASSES.BITCOININFO_BOX_COLUMN}>
+                    <div dangerouslySetInnerHTML={{__html:usd.symbol}} className = {`${CLASSES.BITCOININFO_BOX_COLUMN_SYMBOL} ${CLASSES.M_12}`}/>
+                        <div className = {CLASSES.M_12}>{usd.code}</div>
+                        <div className = {CLASSES.M_12}>{usd.description}</div>
+                        <div className = {`${usd_active} ${CLASSES.M_12}`}>{usd.rate}</div>
                     </div>
                 </div>
                 <div className = {CLASSES.BITCOININFO_BOX}>
-                        <div dangerouslySetInnerHTML={{__html:gbp.symbol}} style = {{color:"gold"}}/>
-                        <div>{gbp.code}</div>
-                        <div>{gbp.description}</div>
-                        <div className = {gbp_active}>{gbp.rate}</div>
+                    <div className = {CLASSES.BITCOININFO_BOX_COLUMN}>
+                        <div dangerouslySetInnerHTML={{__html:gbp.symbol}} className = {`${CLASSES.BITCOININFO_BOX_COLUMN_SYMBOL} ${CLASSES.M_12}`}/>
+                        <div className = {CLASSES.M_12}>{gbp.code}</div>
+                        <div className = {CLASSES.M_12}>{gbp.description}</div>
+                        <div className = {`${usd_active} ${CLASSES.M_12}`}>{gbp.rate}</div>
+                    </div>
                 </div>
                 <div className = {CLASSES.BITCOININFO_BOX}>
-                        <div dangerouslySetInnerHTML={{__html:eur.symbol}} style = {{color:"gold"}}/>
-                        <div>{eur.code}</div>
-                        <div>{eur.description}</div>
-                        <div className = {eur_active}>{eur.rate}</div>
+                    <div className = {CLASSES.BITCOININFO_BOX_COLUMN}>
+                        <div dangerouslySetInnerHTML={{__html:eur.symbol}} className= {`${CLASSES.BITCOININFO_BOX_COLUMN_SYMBOL} ${CLASSES.M_12}`}/>
+                        <div className = {CLASSES.M_12}>{eur.code}</div>
+                        <div className = {CLASSES.M_12}>{eur.description}</div>
+                        <div className = {`${usd_active} ${CLASSES.M_12}`}>{eur.rate}</div>
+                    </div>
                 </div>
                 
             </div>

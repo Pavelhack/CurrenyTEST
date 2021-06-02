@@ -1,8 +1,8 @@
 import './App.css';
-import React, {useState} from "react"
-import {Main, SelectForm} from "./components/Main";
+import {Main} from "./components/Main";
 import {InfoRate} from "./components/InfoRate";
 import {Header} from "./components/Header";
+import {Footer} from "./components/Footer";
 import {Route, Switch} from "react-router-dom"
 
 
@@ -24,6 +24,7 @@ export const App = () => {
 
                 </Switch>
             </div>
+            <Footer/>
         </div>
     );
 }

@@ -14,6 +14,7 @@ import graph from '../img-app/top-graph.svg'
 export const Main = () =>{
 
     const CLASSES = {
+        BLOCK: classes.block_1136,
         TOP: classes.top,
         TOP_CONTENT: classes.top_content,
         TOP_CONTENT_GREETING_GRAPH: classes.top_content_greeting_graph,
@@ -120,7 +121,7 @@ export const Main = () =>{
 return(
     <div className = "container">
         <div className  = {CLASSES.TOP}>
-            <div className = "block_1136">
+            <div className = {CLASSES.BLOCK}>
                 <div className = {CLASSES.TOP_CONTENT}>
                     <div className = {CLASSES.TOP_CONTENT_GREETING_GRAPH}>
                         <div className = {CLASSES.TOP_CONTENT_GREETING}>
@@ -140,7 +141,7 @@ return(
         </div>
 
         <div className = {CLASSES.CURRENT_CURRENCY}>
-            <div className = "block_1136">
+            <div className = {CLASSES.BLOCK}>
                 <div className = {CLASSES.CURRENT_CURRENCY_CONTENT}>
                     <div className  = {CLASSES.CURRENT_CURRENCY_TITLE}>
                                 <h1>Current exchange rate in  {currentCountry}</h1>
@@ -162,7 +163,7 @@ return(
         </div>
 
         <div className = {CLASSES.BITCOIN}>
-            <div className = "block_1136">
+            <div className = {CLASSES.BLOCK}>
                 <div className = {CLASSES.BITCOIN_CONTENT}>
                     <div className = {CLASSES.BITCOIN_TITLE}>
                         Bitcoin Rate

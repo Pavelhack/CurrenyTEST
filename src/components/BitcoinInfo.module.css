@@ -18,6 +18,22 @@
     line-height: 120%;
     color: #000000;    
 }
+
+.bitcoinInfo_box_column {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+}
+
+.bitcoinInfo_box_column_symbol {
+    color: gold;
+}
+
+.m_12 {
+    display: flex;
+    justify-content : center;
+    margin: 12px 0px;
+}
       
 .green {
 background-color: green;

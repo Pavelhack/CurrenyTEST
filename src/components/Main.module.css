@@ -3,6 +3,11 @@ button {
     cursor: pointer;
 }
 
+.block_1136 {
+    width: 1136px;
+    margin: 0px auto;
+  }
+
 .container{
     margin: 0;
 }
