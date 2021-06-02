@@ -16,15 +16,18 @@ export const PopularCurrencies = ({usd , eur, gbp, aud, cad, chf, flag}) =>{
        CURRENT_CURRENCY_TABLE_ROWS_INSIDE: classes.current_currency_table_rows_inside,
        CURRENT_CURRENCY_FLAG_IMG: classes.current_currency_flag_img,
        ODD: classes.odd,
-       EVEN: classes.even
-
+       EVEN: classes.even,
+       TL_BORDER: classes.top_left,
+       TR_BORDER: classes.top_right,
+       BL_BORDER: classes.bottom_left,
+       BR_BORDER: classes.bottom_right,
     }
 
     return(
         <div className={CLASSES.CURRENT_CURRENCY_TABLE}>
             <div className={`${CLASSES.CURRENT_CURRENCY_TABLE_COLUMN} flag`}>
 
-                <div className={`${CLASSES.CURRENT_CURRENCY_TABLE_HEADER} `}>
+                <div className={`${CLASSES.CURRENT_CURRENCY_TABLE_HEADER} ${CLASSES.TL_BORDER}`}>
                     <div className = {CLASSES.CURRENT_CURRENCY_TABLE_ROWS_INSIDE}>
                         National flag of country
                         </div>
@@ -54,7 +57,7 @@ export const PopularCurrencies = ({usd , eur, gbp, aud, cad, chf, flag}) =>{
                         <img className = {CLASSES.CURRENT_CURRENCY_FLAG_IMG} src = {CAD_flag}/>
                     </div>
                     </div>
-                <div className={`${CLASSES.CURRENT_CURRENCY_TABLE_ROWS} flag_rows ${CLASSES.EVEN}`}>
+                <div className={`${CLASSES.CURRENT_CURRENCY_TABLE_ROWS} flag_rows ${CLASSES.EVEN} ${CLASSES.BL_BORDER}`}>
                     <div className = {CLASSES.CURRENT_CURRENCY_TABLE_ROWS_INSIDE}>
                         <img className = {CLASSES.CURRENT_CURRENCY_FLAG_IMG} src = {CHF_flag}/>
                     </div>
@@ -134,8 +137,8 @@ export const PopularCurrencies = ({usd , eur, gbp, aud, cad, chf, flag}) =>{
                     </div>  
                 </div>
             </div>
-            <div className={`${CLASSES.CURRENT_CURRENCY_TABLE_COLUMN} rate`}>
-                <div className={`${CLASSES.CURRENT_CURRENCY_TABLE_HEADER} `}>
+            <div className={`${CLASSES.CURRENT_CURRENCY_TABLE_COLUMN} `}>
+                <div className={`${CLASSES.CURRENT_CURRENCY_TABLE_HEADER} ${CLASSES.TR_BORDER}`}>
                     <div className = {CLASSES.CURRENT_CURRENCY_TABLE_ROWS_INSIDE}>
                         Exchange rate
                     </div>
@@ -165,7 +168,7 @@ export const PopularCurrencies = ({usd , eur, gbp, aud, cad, chf, flag}) =>{
                         {cad}
                     </div>  
                 </div>
-                <div className={`${CLASSES.CURRENT_CURRENCY_TABLE_ROWS} rate_rows ${CLASSES.EVEN}`}>
+                <div className={`${CLASSES.CURRENT_CURRENCY_TABLE_ROWS} rate_rows ${CLASSES.EVEN} ${CLASSES.BR_BORDER}`}>
                     <div className = {CLASSES.CURRENT_CURRENCY_TABLE_ROWS_INSIDE}>
                         {chf}
                     </div>  
