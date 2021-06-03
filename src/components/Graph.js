@@ -3,52 +3,65 @@ import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import './Graph.css';
 
-export const Graph = ({usd , eur, gbp, aud, cad, chf, bitcoinFirstRate}) =>{
+export const Graph = ({usd , eur, gbp, aud, cad, chf, currencyName}) =>{
 
-   /*  const [us, setUS] = useState([]);
+    const [us, setUS] = useState([]);
     const [eu, setEU] = useState([]);
     const [gp, setGP] = useState([]);
     const [ad, setAD] = useState([]);
     const [ca, setCA] = useState([]);
-    const [cf, setCF] = useState([]); */
+    const [cf, setCF] = useState([]); 
     
-    const us = [];
+    
+    /* const us = [];
     const eu = [];
     const gp = [];
     const ad = [];
     const ca = [];
     const cf = [];
-
-    /* const ratCurrenciesFun = [setUS, setEU, setGP, setAD, setCA, setCF] */
+ */
+    const ratCurrenciesFun = [setUS, setEU, setGP, setAD, setCA, setCF]
     const ratCurrencies = [us , eu, gp, ad, ca, cf];
     const currencies = [usd , eur, gbp, aud, cad, chf]
-
+    
     function getRandomArray( $, min, max) {
+        console.log($)
+
         for(let i = 0; i <= 9; i++){
             $.push(Math.ceil((Math.random() * (max - min) + min) *100000)/100000)
         }
+        
     }
 
-    for(let i = 0; i<= ratCurrencies.length - 1; i++){
-        getRandomArray(ratCurrencies[i],currencies[i]/1.1, currencies[i])
-    }
-
-    /* useEffect(
-        () => {
-            function getRandomArray( $, min, max) {
-                for(let i = 0; i <= 9; i++){
-                    $.push(Math.ceil((Math.random() * (max - min) + min) *100000)/100000)
+    useEffect(
+        () =>{
+            console.log("count")
+            for(let i = 0; i<= ratCurrencies.length - 1; i++){
+                console.log(ratCurrencies[i])
+                if(ratCurrencies[i] !== 0){ 
+                    getRandomArray( ratCurrencies[i], currencies[i]/1.1, currencies[i])
                 }
-                return($)
+            }
+        },[]
+    )
+    
+    useEffect(
+        () => {
+            function getRandomArray(min, max) {
+                const array = []
+                for(let i = 0; i <= 9; i++){
+                    array.push(Math.ceil((Math.random() * (max - min) + min) *100000)/100000)
+                }
+                return(array)
             }
             for(let i = 0; i<= ratCurrencies.length - 1; i++){
-                let result = getRandomArray(ratCurrencies[i], currencies[i]/1.1, currencies[i])
+                let result = getRandomArray(currencies[i]/1.1, currencies[i])
                 let fun = ratCurrenciesFun[i]
                 fun(result)
             }
-        },[chf]
+        },[currencyName]
     )
- */
+
     
 
     const options ={

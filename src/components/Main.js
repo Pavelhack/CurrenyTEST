@@ -45,6 +45,7 @@ export const Main = () =>{
 
     const [currentCountry, setCurrentCountry] = useState("Belarus");
 
+    // Name of currency current 
     const [currencyName, setCurrencyName] = useState("New Belarusian ruble");
 
     const [bitcoin, setBitcoin] = useState([]);
@@ -156,7 +157,7 @@ return(
                         <PopularCurrencies usd = {usd} eur = {eur} gbp = {gbp} aud = {aud} cad = {cad} chf = {chf} flag={flag}/>
                     </div>
                     <div className = {CLASSES.CURRENT_CURRENCY_GRAPH}>
-                        <Graph usd = {usd} eur = {eur} gbp = {gbp} aud = {aud} cad = {cad} chf = {chf} bitcoinFirstRate = {bitcoinFirstRate}/>
+                        <Graph usd = {usd} eur = {eur} gbp = {gbp} aud = {aud} cad = {cad} chf = {chf} currencyName = {currencyName}/>
                     </div>
                 </div>
             </div>    
