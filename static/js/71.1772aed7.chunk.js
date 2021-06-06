@@ -1,0 +1,2 @@
+(this["webpackJsonpcurency-exchange"]=this["webpackJsonpcurency-exchange"]||[]).push([[71],{284:function(A,c,g){"use strict";g.r(c),c.default="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAUBAMAAAAToVI7AAAAElBMVEV1st30+PyWxOWNv+OdyOacx+ZEXEhwAAAAPElEQVQY02NgIBUYYwqxCgZgCgpi0avEQCaAmM+CLMQsqAAkmQQNCIgxOEDcSK7V2NwsiC0MHIgKKwIAAG9nAxCVicgXAAAAAElFTkSuQmCC"}}]);
+//# sourceMappingURL=71.1772aed7.chunk.js.map
