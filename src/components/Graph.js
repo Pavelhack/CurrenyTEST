@@ -14,7 +14,8 @@ export const Graph = ({currencies, currencyName}) =>{
 
     const ratCurrenciesFun = [setUS, setEU, setGP, setAD, setCA, setCF]
     const ratCurrencies = [us , eu, gp, ad, ca, cf];
-    const [toggle, setToggle] = useState(false)
+    const [toggle, setToggle] = useState(false);
+
     
     /* function getRandomArray( $, min, max) {
         console.log($)
@@ -34,17 +35,18 @@ export const Graph = ({currencies, currencyName}) =>{
         return(array)
     }
 
-    console.log(toggle, ratCurrencies, "ratCurrencies is empty")
 
     useEffect(
         () =>{
-                console.log("useEffect")
+            if(currencies !== null){
                 for(let i = 0; i<= ratCurrencies.length - 1; i++){
                     let result = getRandomArray(currencies[i]/1.1, currencies[i])
                     let fun = ratCurrenciesFun[i]
                     fun(result)
                 }
                 setToggle(true)
+            }
+                
             
         },[currencies]
     )
@@ -52,6 +54,8 @@ export const Graph = ({currencies, currencyName}) =>{
     useEffect(
 
         () => {
+            console.log("currencies is change"+ currencies)
+        if(currencies !== null){
             function getRandomArray(min, max) {
                 const array = []
                 for(let i = 0; i <= 9; i++){
@@ -64,6 +68,8 @@ export const Graph = ({currencies, currencyName}) =>{
                 let fun = ratCurrenciesFun[i]
                 fun(result)
             }
+        }
+            
         },[currencyName]
     )
 

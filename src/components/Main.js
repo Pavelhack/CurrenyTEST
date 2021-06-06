@@ -67,7 +67,7 @@ export const Main = () =>{
 
     const [chf, setCHF] = useState(null);
 
-    const [currencies, setCurrencies] = useState([])
+    const [currencies, setCurrencies] = useState(null)
 
     const [flag, setFlag] = useState(BY_flag);
 
@@ -89,50 +89,51 @@ export const Main = () =>{
         () => {
             const req = new Requests();
             const ar = [];
-            const promise = new Promise(function (resolve){
-                resolve(
-                    req.GetRateForUSDEUR(currencyDefault).then(result =>{
-                        if(result === "Online Services Temporarily unavailable"){
-                            //setUSD(result);
-                            //setEUR(result);
-                            ar.push(result)
-                            ar.push(result)
-                        }else {
-                            ar.push(result.results[`USD_${currencyDefault}`].val);
-                            ar.push(result.results[`EUR_${currencyDefault}`].val);
-                        }
-                    }),
+                    
+                req.GetRateForUSDEUR(currencyDefault).then(result =>{
+                    if(result === "Online Services Temporarily unavailable"){
+                        //setUSD(result);
+                        //setEUR(result);
+                        ar.push(result)
+                        ar.push(result)
+                    }else {
+                        ar.push(result.results[`USD_${currencyDefault}`].val);
+                        ar.push(result.results[`EUR_${currencyDefault}`].val);
+                    }
+                    
+                })
 
-                    req.GetRateForGBPRUB(currencyDefault).then(result =>{
-                        if(result === "Online Services Temporarily unavailable"){
-                            //setGBP(result);
-                            //setAUD(result);
-                            ar.push(result)
-                            ar.push(result)
-                        }else {
-                            ar.push(result.results[`GBP_${currencyDefault}`].val);
-                            ar.push(result.results[`AUD_${currencyDefault}`].val);
-                        }
-                    }),
-        
+                req.GetRateForGBPRUB(currencyDefault).then(result =>{
+                    if(result === "Online Services Temporarily unavailable"){
+                        //setGBP(result);
+                        //setAUD(result);
+                        ar.push(result)
+                        ar.push(result)
+                    }else {
+                        ar.push(result.results[`GBP_${currencyDefault}`].val);
+                        ar.push(result.results[`AUD_${currencyDefault}`].val);
+                    }
+                    
+                })
+    
 
-                    req.GetRateForCNYJPY(currencyDefault).then(result =>{
-                        if(result === "Online Services Temporarily unavailable"){
-                            //setCAD(result);
-                            //setCHF(result);
-                            ar.push(result)
-                            ar.push(result)
-                        }else {
-                            ar.push(result.results[`CAD_${currencyDefault}`].val);
-                            ar.push(result.results[`CHF_${currencyDefault}`].val);
-                        }
-                        
-                    })
-                )
+                req.GetRateForCNYJPY(currencyDefault).then(result =>{
+                    if(result === "Online Services Temporarily unavailable"){
+                        //setCAD(result);
+                        //setCHF(result);
+                        currencies.push(result)
+                        ar.push(result)
+                    }else {
+                        ar.push(result.results[`CAD_${currencyDefault}`].val);
+                        ar.push(result.results[`CHF_${currencyDefault}`].val);
+                    }
+                })
+                
+                setTimeout(()=>{
+                        setCurrencies(ar)
+                },1500)
 
-            })
-            setCurrencies(ar)
-        
+            //setCurrencies(ar)
 
             /* req.GetRateForUSDEUR(currencyDefault).then(result =>{
                 if(result === "Online Services Temporarily unavailable"){
