@@ -9,6 +9,7 @@ import BY_flag from '../img/by.png';
 import {BitcoinGraph} from './BitcoinGraph';
 import classes from './Main.module.css';
 import graph from '../img-app/top-graph.svg'
+import { arrayMax } from 'highcharts';
 
 
 export const Main = () =>{
@@ -66,6 +67,8 @@ export const Main = () =>{
 
     const [chf, setCHF] = useState(null);
 
+    const [currencies, setCurrencies] = useState([])
+
     const [flag, setFlag] = useState(BY_flag);
 
     const showFun = () =>{
@@ -85,8 +88,53 @@ export const Main = () =>{
     useEffect(
         () => {
             const req = new Requests();
+            const ar = [];
+            const promise = new Promise(function (resolve){
+                resolve(
+                    req.GetRateForUSDEUR(currencyDefault).then(result =>{
+                        if(result === "Online Services Temporarily unavailable"){
+                            //setUSD(result);
+                            //setEUR(result);
+                            ar.push(result)
+                            ar.push(result)
+                        }else {
+                            ar.push(result.results[`USD_${currencyDefault}`].val);
+                            ar.push(result.results[`EUR_${currencyDefault}`].val);
+                        }
+                    }),
 
-            req.GetRateForUSDEUR(currencyDefault).then(result =>{
+                    req.GetRateForGBPRUB(currencyDefault).then(result =>{
+                        if(result === "Online Services Temporarily unavailable"){
+                            //setGBP(result);
+                            //setAUD(result);
+                            ar.push(result)
+                            ar.push(result)
+                        }else {
+                            ar.push(result.results[`GBP_${currencyDefault}`].val);
+                            ar.push(result.results[`AUD_${currencyDefault}`].val);
+                        }
+                    }),
+        
+
+                    req.GetRateForCNYJPY(currencyDefault).then(result =>{
+                        if(result === "Online Services Temporarily unavailable"){
+                            //setCAD(result);
+                            //setCHF(result);
+                            ar.push(result)
+                            ar.push(result)
+                        }else {
+                            ar.push(result.results[`CAD_${currencyDefault}`].val);
+                            ar.push(result.results[`CHF_${currencyDefault}`].val);
+                        }
+                        
+                    })
+                )
+
+            })
+            setCurrencies(ar)
+        
+
+            /* req.GetRateForUSDEUR(currencyDefault).then(result =>{
                 if(result === "Online Services Temporarily unavailable"){
                     setUSD(result);
                     setEUR(result);
@@ -98,8 +146,8 @@ export const Main = () =>{
 
             req.GetRateForGBPRUB(currencyDefault).then(result =>{
                 if(result === "Online Services Temporarily unavailable"){
-                    setUSD(result);
-                    setEUR(result);
+                    setGBP(result);
+                    setAUD(result);
                 }else {
                     setGBP(result.results[`GBP_${currencyDefault}`].val);
                     setAUD(result.results[`AUD_${currencyDefault}`].val);
@@ -108,13 +156,13 @@ export const Main = () =>{
 
             req.GetRateForCNYJPY(currencyDefault).then(result =>{
                 if(result === "Online Services Temporarily unavailable"){
-                    setUSD(result);
-                    setEUR(result);
+                    setCAD(result);
+                    setCHF(result);
                 }else {
                     setCAD(result.results[`CAD_${currencyDefault}`].val);
                     setCHF(result.results[`CHF_${currencyDefault}`].val);
                 }
-            });
+            }); */
 
         },[currencyDefault]
     )
@@ -157,7 +205,7 @@ return(
                         <PopularCurrencies usd = {usd} eur = {eur} gbp = {gbp} aud = {aud} cad = {cad} chf = {chf} flag={flag}/>
                     </div>
                     <div className = {CLASSES.CURRENT_CURRENCY_GRAPH}>
-                        <Graph usd = {usd} eur = {eur} gbp = {gbp} aud = {aud} cad = {cad} chf = {chf} currencyName = {currencyName}/>
+                        <Graph  currencies = {currencies} currencyName = {currencyName}/>
                     </div>
                 </div>
             </div>    
