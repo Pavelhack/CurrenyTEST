@@ -92,11 +92,13 @@ export const Main = () =>{
                     
                 req.GetRateForUSDEUR(currencyDefault).then(result =>{
                     if(result === "Online Services Temporarily unavailable"){
-                        //setUSD(result);
-                        //setEUR(result);
+                        setUSD(result);
+                        setEUR(result);
                         ar.push(result)
                         ar.push(result)
                     }else {
+                        setUSD(result.results[`USD_${currencyDefault}`].val);
+                        setEUR(result.results[`EUR_${currencyDefault}`].val);
                         ar.push(result.results[`USD_${currencyDefault}`].val);
                         ar.push(result.results[`EUR_${currencyDefault}`].val);
                     }
@@ -105,11 +107,13 @@ export const Main = () =>{
 
                 req.GetRateForGBPRUB(currencyDefault).then(result =>{
                     if(result === "Online Services Temporarily unavailable"){
-                        //setGBP(result);
-                        //setAUD(result);
+                        setGBP(result);
+                        setAUD(result);
                         ar.push(result)
                         ar.push(result)
                     }else {
+                        setGBP(result.results[`GBP_${currencyDefault}`].val);
+                        setAUD(result.results[`AUD_${currencyDefault}`].val);
                         ar.push(result.results[`GBP_${currencyDefault}`].val);
                         ar.push(result.results[`AUD_${currencyDefault}`].val);
                     }
@@ -119,51 +123,22 @@ export const Main = () =>{
 
                 req.GetRateForCNYJPY(currencyDefault).then(result =>{
                     if(result === "Online Services Temporarily unavailable"){
-                        //setCAD(result);
-                        //setCHF(result);
-                        currencies.push(result)
+                        setCAD(result);
+                        setCHF(result);
+                        ar.push(result)
                         ar.push(result)
                     }else {
+                        setCAD(result.results[`CAD_${currencyDefault}`].val);
+                        setCHF(result.results[`CHF_${currencyDefault}`].val);
                         ar.push(result.results[`CAD_${currencyDefault}`].val);
                         ar.push(result.results[`CHF_${currencyDefault}`].val);
                     }
                 })
                 
                 setTimeout(()=>{
+                        ar.sort()
                         setCurrencies(ar)
                 },1500)
-
-            //setCurrencies(ar)
-
-            /* req.GetRateForUSDEUR(currencyDefault).then(result =>{
-                if(result === "Online Services Temporarily unavailable"){
-                    setUSD(result);
-                    setEUR(result);
-                }else {
-                    setUSD(result.results[`USD_${currencyDefault}`].val);
-                    setEUR(result.results[`EUR_${currencyDefault}`].val);
-                }
-            });
-
-            req.GetRateForGBPRUB(currencyDefault).then(result =>{
-                if(result === "Online Services Temporarily unavailable"){
-                    setGBP(result);
-                    setAUD(result);
-                }else {
-                    setGBP(result.results[`GBP_${currencyDefault}`].val);
-                    setAUD(result.results[`AUD_${currencyDefault}`].val);
-                }
-            });
-
-            req.GetRateForCNYJPY(currencyDefault).then(result =>{
-                if(result === "Online Services Temporarily unavailable"){
-                    setCAD(result);
-                    setCHF(result);
-                }else {
-                    setCAD(result.results[`CAD_${currencyDefault}`].val);
-                    setCHF(result.results[`CHF_${currencyDefault}`].val);
-                }
-            }); */
 
         },[currencyDefault]
     )
@@ -190,7 +165,7 @@ return(
             </div>    
         </div>
 
-        <div className = {CLASSES.CURRENT_CURRENCY}>
+        <div className = {CLASSES.CURRENT_CURRENCY} id = "Exchange_rate">
             <div className = {CLASSES.BLOCK}>
                 <div className = {CLASSES.CURRENT_CURRENCY_CONTENT}>
                     <div className  = {CLASSES.CURRENT_CURRENCY_TITLE}>
@@ -212,13 +187,13 @@ return(
             </div>    
         </div>
 
-        <div className = {CLASSES.BITCOIN}>
+        <div className = {CLASSES.BITCOIN} id = "Bitcoin_rate">
             <div className = {CLASSES.BLOCK}>
                 <div className = {CLASSES.BITCOIN_CONTENT}>
                     <div className = {CLASSES.BITCOIN_TITLE}>
                         Bitcoin Rate
                     </div>
-                    <div className = {CLASSES.BITCOIN_INFO}>
+                    <div className = {CLASSES.BITCOIN_INFO} >
                         <BitcoinInfo bitcoin = {bitcoin} setBitcoin = {setBitcoin} setBitcoinRateUSD = {setBitcoinRateUSD} setBitcoinFirstRate = {setBitcoinFirstRate}/>
                     </div>
                     <div className = {CLASSES.BITCOIN_BITCOING_RAPH}>

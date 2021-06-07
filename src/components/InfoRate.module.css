@@ -1,0 +1,41 @@
+.container{
+    margin: 0;
+}
+
+.converter {
+    display: flex;
+    margin: 0px;
+    background-image: url(../img-app/Main-bg.svg);
+    height: 100vh;
+    align-items: center;
+}
+
+.block_1136 {
+    width: 1136px;
+    margin: 0px auto;
+}
+
+.converter_content_greeting {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    margin-bottom: 36px;
+}
+
+.converter_content_greeting h1{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 120%;
+    color: #1A1A2E;
+}
+
+.converter_content_greeting p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: #1A1A2E;
+    
+}

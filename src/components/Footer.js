@@ -14,7 +14,7 @@ export const Footer = () =>{
   }
 
   return(
-    <div className = {CLASSES.FOOTER}>
+    <div className = {CLASSES.FOOTER} id = {"Our_contacts"}>
         <div className = {`${CLASSES.BLOCK} ${CLASSES.FOOTER_CONTENT}`}>
             <div className = {CLASSES.FOOTER_DEVELOPER}>
                 <span>Developed by</span>

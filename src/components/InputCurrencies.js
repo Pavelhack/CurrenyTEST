@@ -3,13 +3,11 @@ import {Select} from "antd";
 import {Requests} from "./Requests";
 import DB from './CountryObject.json';
 import classes from "./InputCurrencies.module.css";
-import ant from 'antd/dist/antd.css';
 
 
 
 const CLASSES = {
     INPUT: classes.input,
-    ANT_SELECT_SELECTOR: classes.input,
 }
 
 

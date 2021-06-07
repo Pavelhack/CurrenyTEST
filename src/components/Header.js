@@ -1,6 +1,7 @@
-import { NavLink }  from "react-router-dom";
+import { NavLink, Link }  from "react-router-dom";
 import Logo from "../img-app/Logo.svg";
-import classes from "./Header.module.css"
+import classes from "./Header.module.css";
+import { HashLink } from 'react-router-hash-link';
 
 export const Header = () =>{
   const CLASSES = {
@@ -23,13 +24,16 @@ export const Header = () =>{
 
           <div className = {CLASSES.HEADER__NAVIGATION}>
               <div>
-                <a href="#Exchange_rate">Exchange rate</a>
+                <HashLink scroll={(el) => el.scrollIntoView({ behavior: 'smooth' })}
+                  to="/#Exchange_rate">Exchange rate</HashLink>
               </div>
               <div id = "">
-                <a href="#Bitcoin_rate">Bitcoin rate</a>
+                <HashLink scroll={(el) => el.scrollIntoView({ behavior: 'smooth' })}
+                 to="/#Bitcoin_rate">Bitcoin rate</HashLink>
               </div>
               <div>
-              <a href="#Our_contacts">Our_contacts</a>
+                <HashLink scroll={(el) => el.scrollIntoView({ behavior: 'smooth' })}
+                 to="/#Our_contacts">Our_contacts</HashLink>
               </div>
           </div>
 

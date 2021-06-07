@@ -11,7 +11,6 @@ export const App = () => {
         <div className="App">
             <Header/>
             <div className="content">
-
                 <Switch>
 
                     <Route exact path="/">

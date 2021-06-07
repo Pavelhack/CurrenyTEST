@@ -12,20 +12,9 @@ export const Graph = ({currencies, currencyName}) =>{
     const [ca, setCA] = useState([]);
     const [cf, setCF] = useState([]);
 
-    const ratCurrenciesFun = [setUS, setEU, setGP, setAD, setCA, setCF]
-    const ratCurrencies = [us , eu, gp, ad, ca, cf];
-    const [toggle, setToggle] = useState(false);
-
+    const ratCurrenciesFun = [setAD, setCA, setUS, setEU, setCF, setGP]
+    const ratCurrencies = [ad, ca, us , eu, cf, gp];
     
-    /* function getRandomArray( $, min, max) {
-        console.log($)
-
-        for(let i = 0; i <= 9; i++){
-            $.push(Math.ceil((Math.random() * (max - min) + min) *100000)/100000)
-            console.log($)
-        }
-        
-    } */
 
     function getRandomArray(min, max) {
         const array = []
@@ -42,9 +31,9 @@ export const Graph = ({currencies, currencyName}) =>{
                 for(let i = 0; i<= ratCurrencies.length - 1; i++){
                     let result = getRandomArray(currencies[i]/1.1, currencies[i])
                     let fun = ratCurrenciesFun[i]
+                    console.log(ratCurrencies[i])
                     fun(result)
                 }
-                setToggle(true)
             }
                 
             
@@ -54,7 +43,6 @@ export const Graph = ({currencies, currencyName}) =>{
     useEffect(
 
         () => {
-            console.log("currencies is change"+ currencies)
         if(currencies !== null){
             function getRandomArray(min, max) {
                 const array = []
@@ -72,9 +60,7 @@ export const Graph = ({currencies, currencyName}) =>{
             
         },[currencyName]
     )
-
     
-
     const options ={
         title: {
             text: 'Changes in the rate for the last 10 days'
