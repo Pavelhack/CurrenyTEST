@@ -1,4 +1,4 @@
-import { NavLink, Link }  from "react-router-dom";
+import { NavLink }  from "react-router-dom";
 import Logo from "../img-app/Logo.svg";
 import classes from "./Header.module.css";
 import { HashLink } from 'react-router-hash-link';

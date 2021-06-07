@@ -9,8 +9,7 @@ import BY_flag from '../img/by.png';
 import {BitcoinGraph} from './BitcoinGraph';
 import classes from './Main.module.css';
 import graph from '../img-app/top-graph.svg'
-import { arrayMax } from 'highcharts';
-
+import { HashLink } from 'react-router-hash-link';
 
 export const Main = () =>{
 
@@ -153,7 +152,12 @@ return(
                             <h1>Hey!<br/> I want to help you keep track<br/>of the current exchange rate</h1>
                             <p>It’s an easy clean app for tracking the state of the world exchange<br/> rate, also you can check bitkoin state in real time.<br/><br/> Check all informaation or use the currency converter</p>
                             <div className = {CLASSES.TOP_CONTENT_BTNS}>
-                                <button className = {CLASSES.TOP_CONTENT_BTNS_SHOW} onClick = {showFun}>Show me more</button>
+                                <HashLink scroll={(el) => el.scrollIntoView({ behavior: 'smooth' })}
+                                    to="/#Exchange_rate">
+                                        <button className = {CLASSES.TOP_CONTENT_BTNS_SHOW} onClick = {showFun}>
+                                            Show me more
+                                        </button>
+                                </HashLink>
                                 <button className = {CLASSES.TOP_CONTENT_BTNS_OPEN} onClick = {converter}>Open converter</button>
                             </div>
                         </div>
