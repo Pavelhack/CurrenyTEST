@@ -6,6 +6,7 @@ import { HashLink } from 'react-router-hash-link';
 export const Header = () =>{
   const CLASSES = {
     HEADER: classes.header,
+    HEADER__BLOCK: classes.block_1136,
     HEADER__LOGO: classes.header__logo,
     HEADER__NAVBAR: classes.header__navbar,
     HEADER__NAVIGATION: classes.header__navigation,
@@ -15,7 +16,7 @@ export const Header = () =>{
   }
   return(
     <div className = {CLASSES.HEADER}>
-      <div className = "block_1136">
+      <div className = {CLASSES.HEADER__BLOCK}>
         <nav className = {CLASSES.HEADER__NAVBAR}>
 
           <div className = {CLASSES.HEADER__LOGO}>

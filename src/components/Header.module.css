@@ -12,6 +12,11 @@
     color: #68E2B1;
 }
 
+.block_1136 {
+    width: 1136px;
+    margin: 0px auto;
+}
+
 .header__navbar {
     display: flex;  
     padding: 18px 0px;
