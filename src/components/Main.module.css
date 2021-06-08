@@ -59,7 +59,7 @@ button {
     flex-wrap: wrap;
     width: 396px;
     justify-content: space-between;
-
+    margin-top: 10px;
 }
 
 .top_content_btns_show {
@@ -72,6 +72,8 @@ button {
     border-radius: 8px;
     align-items: center;
     justify-content: center;
+    color: #6C63FF;
+    padding: 12px 32px;
 }
 
 .top_content_btns_open {
@@ -83,6 +85,7 @@ button {
     color: white;
     align-items: center;
     justify-content: center;
+    padding: 12px 32px;
 }
 
 .top_content_graph {

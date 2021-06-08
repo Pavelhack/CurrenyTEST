@@ -62,7 +62,7 @@ export const InputCurrencies = ({setCurrency, setCurrentCountry, setCurrencyName
 
     return (
         <Select 
-            style = {{width: "191px"}}
+            /* style = {{width: "191px"}} */
             /* className = {CLASSES.INPUT} */
             showSearch
             value={inputValue}
