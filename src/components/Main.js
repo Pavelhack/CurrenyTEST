@@ -173,10 +173,10 @@ return(
             <div className = {CLASSES.BLOCK}>
                 <div className = {CLASSES.CURRENT_CURRENCY_CONTENT}>
                     <div className  = {CLASSES.CURRENT_CURRENCY_TITLE}>
-                                <h1>Current exchange rate in  {currentCountry}</h1>
-                                <div className = {CLASSES.CURRENT_CURRENCY_FLAG} /* style = {{backgroundImage : `url(${flag})`}} */>
-                                    <img src = {flag} className = {CLASSES.CURRENT_CURRENCY_FLAG_IMG}/>
-                                </div>
+                            <h1>Current exchange rate in  {currentCountry}</h1>
+                            <div className = {CLASSES.CURRENT_CURRENCY_FLAG} >
+                                <img src = {flag} className = {CLASSES.CURRENT_CURRENCY_FLAG_IMG}/>
+                            </div>
                     </div>
                     <div className = {CLASSES.CURRENT_CURRENT_CURRENCY_INPUT}>
                         <InputCurrencies setCurrency = {setCurrencyDefault} setCurrentCountry={setCurrentCountry} setCurrencyName = {setCurrencyName} setFlag={setFlag}/>
@@ -200,7 +200,7 @@ return(
                     <div className = {CLASSES.BITCOIN_INFO} >
                         <BitcoinInfo bitcoin = {bitcoin} setBitcoin = {setBitcoin} setBitcoinRateUSD = {setBitcoinRateUSD} setBitcoinFirstRate = {setBitcoinFirstRate}/>
                     </div>
-                    <div className = {CLASSES.BITCOIN_BITCOING_RAPH}>
+                    <div className = {CLASSES.BITCOIN_BITCOIN_GRAPH}>
                         <BitcoinGraph bitcoin = {bitcoin} setBitcoin = {setBitcoin} bitcoinRateUSD = {bitcoinRateUSD} bitcoinFirstRate = {bitcoinFirstRate}/>
                     </div>
                 </div>

@@ -31,7 +31,6 @@ export const Graph = ({currencies, currencyName}) =>{
                 for(let i = 0; i<= ratCurrencies.length - 1; i++){
                     let result = getRandomArray(currencies[i]/1.1, currencies[i])
                     let fun = ratCurrenciesFun[i]
-                    console.log(ratCurrencies[i])
                     fun(result)
                 }
             }

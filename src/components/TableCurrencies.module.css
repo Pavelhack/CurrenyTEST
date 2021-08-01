@@ -60,3 +60,8 @@
 .even {
   background-color: #F0EFFF;
 }
+
+@media screen and (max-width: 1024px){ 
+
+    
+}
